@@ -1,5 +1,9 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="CSS/style.css" title="Style">
+  <style>
+    h1 {
+      color: red;
+    }
+  </style>
 <head>
 
 <body>
