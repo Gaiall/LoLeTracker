@@ -31,6 +31,7 @@ p {
   background-color: #42454D;
   color: inherit;
   margin-top: 8px;
+  width: 30%;
 }
 
 /* Style the buttons inside the tab */
@@ -80,6 +81,10 @@ p {
 }
 
 .elementCentered {
+    margin:auto;
+}
+
+.contentCentered {
     text-align: center;
 }
 
