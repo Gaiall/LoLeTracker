@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8"/>
@@ -10,38 +10,48 @@
 </head>
 
 <body>
-  <h3 class="maintitle">LoLe Tracker kipu</h3>
-  <div id="mainSearchar" class="mainSearchBar elementCentered contentCentered">
-    <form id="masterysearch" method="get" class="elementInLine">
-      <input class="elementInLine searchBar" type="text" placeholder="Summoner..">
-    </form>
-    <button class="elementInLine searchBar">Search</button>
   <div>
+    <h3 class="maintitle">LoLe Tracker kipu</h3>
 
-  <div class="tab elementCentered">
-    <button class="tablinks" onclick="openTab(event, 'Mastery')" id="defaultOpen">Mastery</button>
-    <button class="tablinks" onclick="openTab(event, 'History')">History</button>
-    <button class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button>
-  </div>
+    <div class="sideRotationChampions">
+      <a href="#">Champion Rotation</a>
+      <?php
+        echo "test";
+      ?>
+      <a href="#">New Player Champion Rotation</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="main">
+      <div id="mainSearchar" class="mainSearchBar elementCentered">
+        <form id="masterysearch" method="get" class="elementInLine">
+          <input class="elementInLine searchBar" type="text" placeholder="Summoner..">
+        </form>
+        <button class="elementInLine searchBar">Search</button>
+        <div>
+
+          <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Mastery')" id="defaultOpen">Mastery</button>
+            <button class="tablinks" onclick="openTab(event, 'History')">History</button>
+            <button class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button>
+          </div>
 
 
-  <div id="Mastery" class="tabcontent elementCentered">
-     <h3>Mastery</h3>
-  </div>
+          <div id="Mastery" class="tabcontent">
+            <h3>Mastery</h3>
+          </div>
 
-  <div id="History" class="tabcontent elementCentered">
-    <h3>History</h3>
-    <p>History is the capital of France.</p>
-  </div>
+          <div id="History" class="tabcontent">
+            <h3>History</h3>
+          </div>
 
-  <div id="Spectate" class="tabcontent elementCentered">
-    <h3>Spectate</h3>
-    <p>Spectate is the capital of Japan.</p>
-  </div>
-
-
-  <div class="footer">
-    <p>LoLe Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
-  </div>
-</body>
-</html>
+          <div id="Spectate" class="tabcontent">
+            <h3>Spectate</h3>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>LoLe Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+      </div>
+    </body>
+    </html>
