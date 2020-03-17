@@ -1,0 +1,21 @@
+/* The sidebar menu */
+.sideRotationChampions {
+  height:100%;
+  width: 160px;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sideRotationChampions a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
