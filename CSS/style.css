@@ -59,6 +59,16 @@ body {
   font-size: 17px;
 }
 
+.tabcontent button {
+    display:inline;
+    float: center;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
