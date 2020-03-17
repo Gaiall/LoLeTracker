@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css" title="Style">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <h3 class="maintitle">Fade in Tabs</h3>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Mastery')" id="defaultOpen">Mastery</button>
+            <button class="tablinks" onclick="openTab(event, 'History')">History</button>
+            <button class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button>
+        </div>
+
+        <div id="Mastery" class="tabcontent">
+            <h3>Mastery</h3>
+            <input type="text" placeholder="Summoner..">
+        </div>
+
+        <div id="History" class="tabcontent">
+            <h3>History</h3>
+            <p>History is the capital of France.</p>
+        </div>
+
+        <div id="Spectate" class="tabcontent">
+            <h3>Spectate</h3>
+            <p>Spectate is the capital of Japan.</p>
+        </div>
+    </body>
+</html>
