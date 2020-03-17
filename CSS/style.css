@@ -64,13 +64,27 @@ p {
 }
 
 /* Style the search box inside the tabcontent */
-.tabcontent input[type=text] {
+.searchBar {
   float: center;
   padding: 6px;
   border: none;
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
+}
+
+.elementInLine {
+    display:inline;
+}
+
+.elementCentered {
+    text-align: center;
+}
+
+.searchBar {
+    margin: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .tabcontent button {
