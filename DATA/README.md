@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <body>
-<p>C'est là qu'on met ce qu'on a récupéré dans le .tgz du site de League of Legends.</p>
-<p color=blue>https://ddragon.leagueoflegends.com/cdn/dragontail-10.6.1.tgz</p>
+<p>emplacement du contenu du .tgz suivant.</p>
+<p>https://ddragon.leagueoflegends.com/cdn/dragontail-10.6.1.tgz</p>
 </body>
 </html>
