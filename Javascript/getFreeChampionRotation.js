@@ -1,4 +1,3 @@
-var apiKey = "RGAPI-0952a012-c842-4fba-aa47-eafb5fa73bd0";
 var request = new XMLHttpRequest();
 request.open("GET","https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key="+apiKey,false);
 request.onload=function(){
