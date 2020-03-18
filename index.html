@@ -20,8 +20,9 @@
                 <p id="servStatusContainer"></p>
                 <script>
                   var request = new XMLHttpRequest();
-                  request.open("GET","https://developer.riotgames.com/apis#lol-status-v3/GET_getShardData",false);
+                  request.open("GET","euw1.api.riotgames.com" + "/lol/status/v3/shard-data",false);
                   request.onload=function(){
+                      console.log(this.repsonse);
                     let data = JSON.parse(this.response);
                     document.getElementsById('servStatusContainer').innerHTML=data.services[0].status;
                   };
