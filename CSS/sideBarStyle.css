@@ -1,7 +1,7 @@
 /* The sidebar menu */
 .sideRotationChampions {
   height:100%;
-  width: 320px;
+  width: 305px;
   position: fixed;
   z-index: 0;
   top: 0;
@@ -22,6 +22,6 @@
 
 .rotationChampionPic{
   border-radius: 50%;
-  width: 90px;
+  width: 70px;
   height:auto;
 }
