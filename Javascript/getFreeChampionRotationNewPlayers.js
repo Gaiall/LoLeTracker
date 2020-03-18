@@ -9,7 +9,6 @@ request.onload=function(){
     link +=chIdToName(data.freeChampionIdsForNewPlayers[i]);
     link +='.png';
     id = i.toString() + "rcPN";
-    console.log(id);
     document.getElementById(id).innerHTML='<img src="'+link+'" class="rotationChampionPic"/>';
   }
 };
