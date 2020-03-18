@@ -21,11 +21,11 @@
                     <script type="text/javascript">
                     var laCleDeLApi = "";
                     var request = new XMLHttpRequest();
-                    request.open("GET","https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key="+laCleDeLApi,false);
+                    request.open("GET","https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key="+apiKey,false);
                     request.onload=function(){
                       console.log(this.response);
                       var data = JSON.parse(this.response);
-                      document.getElementsById('servStatusContainer').innerHTML=data.services[0].status;
+                      document.getElementById('servStatusContainer').innerHTML=data.services[0].status;
                     };
                     request.send();
                 </script>
