@@ -75,3 +75,45 @@
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+ul {
+	background: #42454D;
+	list-style: none;
+	/* contain the list items */
+	overflow: hidden;
+
+	/*margin: 0 auto;
+	display: table;*/ /* ul will behave like a table now */
+
+	text-align: center;
+}
+
+ul li {
+	/* float: left; */
+	display: inline-block;
+}
+
+ul li button {
+	padding: 5px 10px;
+	background: #000;
+	color: #fff;
+
+	/*float: left;*/
+	/* some height would be nice */
+	line-height: 3em;
+	/* adjusting height */
+	display: block; /* or inline-block */
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul li a:hover {
+	background: #e4e4e4;
+	color: #333;
+}
