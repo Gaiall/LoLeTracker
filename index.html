@@ -9,8 +9,18 @@
     <link rel="stylesheet" type="text/css" href="CSS/footerStyle.css" title="Style">
     <link rel="stylesheet" type="text/css" href="CSS/sideBarStyle.css" title="Style">
     <link rel="stylesheet" type="text/css" href="CSS/tabStyle.css" title="Style">
+    <script src="Javascript/jquery.js"></script>
     <script src="Javascript/chIdToName.js"></script>
     <script src="Javascript/chNameToId.js"></script>
+    <script>
+        var apiKey;
+        $.ajaxSetup({
+            async: false
+        });
+        $.getJSON("Javascript/apiKey.json", function(json) {
+            apiKey = json.apiKey;
+        });
+    </script>
 </head>
 
 <body>
