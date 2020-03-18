@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="CSS/footerStyle.css" title="Style">
     <link rel="stylesheet" type="text/css" href="CSS/sideBarStyle.css" title="Style">
     <link rel="stylesheet" type="text/css" href="CSS/tabStyle.css" title="Style">
-    <script type="text/javascript" src="Javascript/script.js"></script>
 </head>
 
 <body>
@@ -18,44 +17,37 @@
             <div class="contentCentered">
                 <a>Server Status</a>
                 <p id="servStatusContainer"></p>
-                    <script type="text/javascript">
-                    var laCleDeLApi = "";
-                    var request = new XMLHttpRequest();
-                    request.open("GET","https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key="+apiKey,false);
-                    request.onload=function(){
-                      console.log(this.response);
-                      var data = JSON.parse(this.response);
-                      document.getElementById('servStatusContainer').innerHTML=data.services[0].status;
-                    };
-                    request.send();
-                </script>
+                <script src="Javascript/loadStatus.js"></script>
                 <a>Champion Rotation</a>
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Annie.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Olaf.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Fiddlesticks.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Karthus.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Irelia.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Blitzcrank.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Maokai.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Renekton.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Elise.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Brand.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Nidalee.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Ahri.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Zac.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Jhin.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Lucian.png">
-                <a>New Player Champion Rotation</a>
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Tristana.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Ezreal.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Riven.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Kayn.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Sona.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Zed.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Warwick.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Veigar.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Morgana.png">
-                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/LeeSin.png">
+                <div id="0rcP" class="rotationChampionPic"></div>
+                <div id="1rcP" class="rotationChampionPic"></div>
+                <div id="2rcP" class="rotationChampionPic"></div>
+                <div id="3rcP" class="rotationChampionPic"></div>
+                <div id="4rcP" class="rotationChampionPic"></div>
+                <div id="5rcP" class="rotationChampionPic"></div>
+                <div id="6rcP" class="rotationChampionPic"></div>
+                <div id="7rcP" class="rotationChampionPic"></div>
+                <div id="8rcP" class="rotationChampionPic"></div>
+                <div id="9rcP" class="rotationChampionPic"></div>
+                <div id="10rcP" class="rotationChampionPic"></div>
+                <div id="11rcP" class="rotationChampionPic"></div>
+                <div id="12rcP" class="rotationChampionPic"></div>
+                <div id="13rcP" class="rotationChampionPic"></div>
+                <div id="14rcP" class="rotationChampionPic"></div>
+                <script src="Javascript/getFreeChampionRotation.js"></script>
+                <a>Champion Rotation for New Players</a>
+                <div id="0rcPN" class="rotationChampionPic"></div>
+                <div id="1rcPN" class="rotationChampionPic"></div>
+                <div id="2rcPN" class="rotationChampionPic"></div>
+                <div id="3rcPN" class="rotationChampionPic"></div>
+                <div id="4rcPN" class="rotationChampionPic"></div>
+                <div id="5rcPN" class="rotationChampionPic"></div>
+                <div id="6rcPN" class="rotationChampionPic"></div>
+                <div id="7rcPN" class="rotationChampionPic"></div>
+                <div id="8rcPN" class="rotationChampionPic"></div>
+                <div id="9rcPN" class="rotationChampionPic"></div>
+                <div id="10rcPN" class="rotationChampionPic"></div>
+                <script src="Javascript/getFreeChampionRotationNewPlayers.js"></script>
             </div>
         </div>
 
