@@ -17,7 +17,17 @@
         <div class="sideRotationChampions">
             <div class="contentCentered">
                 <a>Server Status</a>
-                Online
+                <p id="servStatusContainer"></p>
+                <script>
+                  var request = new XMLHttpRequest();
+                  request.open("GET","https://developer.riotgames.com/apis#lol-status-v3/GET_getShardData",false);
+                  request.onload=function(){
+                    let data = JSON.parse(this.response);
+                    document.getElementsById('servStatusContainer').innerHTML=data.services[0].status;
+                  };
+                  request.send();
+
+                </script>
                 <a>Champion Rotation</a>
                 <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Annie.png">
                 <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Olaf.png">
@@ -47,7 +57,6 @@
                 <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/LeeSin.png">
             </div>
         </div>
-
         <!-- Page content -->
         <div class="main">
             <div class="contentCentered">
