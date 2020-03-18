@@ -17,3 +17,7 @@ p {
 .main {
   padding-left: 160px;
 }
+
+.contentCentered {
+    text-align: center;
+}
