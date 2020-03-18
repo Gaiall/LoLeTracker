@@ -15,7 +15,8 @@ p {
   font: normal normal bold 36px/3 "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: rgba(175,149,0,1);
   letter-spacing: 4px;
-  text-shadow: 0 0 7px rgba(255,255,86,0.7) ;
+  text-shadow: 0 0 7px rgba(255,255,86,0.7);
+  margin: 0px;
 }
 
 .main {

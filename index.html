@@ -1,89 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8"/>
-  <title>LoLe Tracker</title>
-  <link rel="icon" href="img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="CSS/mainStyle.css" title="Style">
-  <link rel="stylesheet" type="text/css" href="CSS/footerStyle.css" title="Style">
-  <link rel="stylesheet" type="text/css" href="CSS/sideBarStyle.css" title="Style">
-  <link rel="stylesheet" type="text/css" href="CSS/tabStyle.css" title="Style">
-  <script type="text/javascript" src="Javascript/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <title>LoLe Tracker</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="CSS/mainStyle.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="CSS/footerStyle.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="CSS/sideBarStyle.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="CSS/tabStyle.css" title="Style">
+    <script type="text/javascript" src="Javascript/script.js"></script>
 </head>
 
 <body>
-  <div>
-    <div class="sideRotationChampions">
-      <div class="contentCentered">
-        <a href="#">Server Status</a>
-        Online
-        <a href="#">Champion Rotation</a>
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Annie.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Olaf.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Fiddlesticks.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Karthus.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Irelia.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Blitzcrank.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Maokai.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Renekton.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Elise.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Brand.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Nidalee.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Ahri.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Zac.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Jhin.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Lucian.png">
-        <a href="#">New Player Champion Rotation</a>
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Tristana.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Ezreal.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Riven.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Kayn.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Sona.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Zed.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Warwick.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Veigar.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Morgana.png">
-        <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/LeeSin.png">
-      </div>
-    </div>
-
-    <!-- Page content -->
-    <div class="main">
-      <div class="contentCentered">
-        <h3 class="maintitle">LoLe Tracker</h3>
-      </div>
-
-      <div class="wrapper contentCentered">
-        <div id="mainSearchar" class="mainSearchBar">
-          <form id="masterysearch" method="get" class="elementInLine">
-            <input class="elementInLine searchBar" type="text" placeholder="Summoner..">
-          </form>
-          <button class="elementInLine searchBar">Search</button>
-          <div>
-            <ul>
-              <li><button class="tablinks" onclick="openTab(event, 'Mastery')" id="defaultOpen">Mastery</button></li>
-              <li><button class="tablinks" onclick="openTab(event, 'History')">History</button></li>
-              <li><button class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button></li>
-            </ul>
-
-            <div id="Mastery" class="tabcontent">
-              <h3>Mastery</h3>
+    <div>
+        <div class="sideRotationChampions">
+            <div class="contentCentered">
+                <a href="#">Server Status</a>
+                Online
+                <a href="#">Champion Rotation</a>
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Annie.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Olaf.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Fiddlesticks.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Karthus.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Irelia.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Blitzcrank.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Maokai.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Renekton.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Elise.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Brand.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Nidalee.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Ahri.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Zac.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Jhin.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Lucian.png">
+                <a href="#">New Player Champion Rotation</a>
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Tristana.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Ezreal.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Riven.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Kayn.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Sona.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Zed.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Warwick.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Veigar.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/Morgana.png">
+                <img class="rotationChampionPic" src="./DATA/10.5.1/img/champion/LeeSin.png">
             </div>
-
-            <div id="History" class="tabcontent">
-              <h3>History</h3>
-            </div>
-
-            <div id="Spectate" class="tabcontent">
-              <h3>Spectate</h3>
-
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="footer">
-        <p>LoLe Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
-      </div>
+
+        <!-- Page content -->
+        <div class="main">
+            <div class="contentCentered">
+                <h3 class="maintitle">LoLe Tracker</h3>
+            </div>
+
+            <div class="wrapper contentCentered">
+                <div id="mainSearchar" class="mainSearchBar">
+                    <form id="masterysearch" method="get" class="elementInLine">
+                        <input class="elementInLine searchBar" type="text" placeholder="Summoner..">
+                    </form>
+                    <button class="elementInLine searchBar">Search</button>
+                    <div>
+                        <ul>
+                            <li><button class="tablinks" onclick="openTab(event, 'Mastery')" id="defaultOpen">Mastery</button></li>
+                            <li><button class="tablinks" onclick="openTab(event, 'History')">History</button></li>
+                            <li><button class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button></li>
+                        </ul>
+
+                        <div id="Mastery" class="tabcontent">
+                            <h3>Mastery</h3>
+                            <ul>
+                                <li>Champion 1</li>
+                                <li>Champion 2</li>
+                                <li>Champion 3</li>
+                            </ul>
+                        </div>
+
+                        <div id="History" class="tabcontent">
+                            <h3>History</h3>
+                        </div>
+
+                        <div id="Spectate" class="tabcontent">
+                            <h3>Spectate</h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>LoLe Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+            </div>
     </body>
-    </html>
+</html>
