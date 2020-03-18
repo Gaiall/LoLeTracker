@@ -6,7 +6,7 @@ request.onload=function(){
   /*Permet d'afficher le status des serveurs avec la première lettre en majuscule*/
   for(let i = 0; i < data.freeChampionIdsForNewPlayers.length;i++){
     let link ='./DATA/10.5.1/img/champion/';
-    link +=chIDToName(data.freeChampionIdsForNewPlayers[i]);
+    link +=chIdToName(data.freeChampionIdsForNewPlayers[i]);
     link +='.png';
     id = i.toString() + "rcPN";
     console.log(id);
