@@ -1,5 +1,5 @@
-function ChIDToName($name){
-  switch($name){
+function ChIDToName(name){
+  switch(name){
     case "Aatrox" : return 266; break;
     case "Thresh" : return 412; break;
     case "Tryndamere" : return 23; break;
