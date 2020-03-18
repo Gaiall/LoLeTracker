@@ -134,6 +134,21 @@ function ChIDToName($id){
     case 267: return "Nami"; break;
     case 59: return "Jarvan IV"; break;
     case 81: return "Ezreal"; break;
+    case 164; return "Camille";break;
+    case 875; return "Sett";break;
+    case 523; return "Aphelios";break;
+    case 235; return "Senna";break;
+    case 246; return "Qiyana";break;
+    case 350; return "Yuumi";break;
+    case 517; return "Sylas";break;
+    case 518; return "Neeko";break;
+    case 555; return "Pyke";break;
+    case 145; return "Kai'Sa";break;
+    case 142; return "Zoe";break;
+    case 516; return "Ornn";break;
+    case 141; return "Kayn";break;
+    case 497; return "Rakan";break;
+    case 498; return "Xayah";break;
     }
 }
 ?>
