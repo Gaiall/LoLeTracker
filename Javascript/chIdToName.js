@@ -1,4 +1,4 @@
-function ChIDToName(id){
+function chIdToName(id){
   switch(id){
     case 266 : return "Aatrox"; break;
     case 412 : return "Thresh"; break;
