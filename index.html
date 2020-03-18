@@ -14,6 +14,10 @@
     <script src="Javascript/chNameToId.js"></script>
     <script>
         var apiKey;
+        var summonerName;
+        var summonerId;
+    </script>
+    <script>
         $.ajaxSetup({
             async: false
         });
@@ -71,7 +75,6 @@
 
             <div class="wrapper contentCentered">
                 <div id="mainSearchar" class="mainSearchBar">
-                    <div id="summonerID"></div>
                     <form id="summonerNameSearch" method="get" class="elementInLine">
                         <input id="summonerNameContainer" class="elementInLine searchBar" type="text" placeholder="Summoner...">
                     </form>
