@@ -9,7 +9,6 @@
     <li>Lol-Status-V3 : https://developer.riotgames.com/apis#lol-status-v3</li>
     <li>Summoner-V4 : https://developer.riotgames.com/apis#summoner-v4</li>
     <li>Match-V4 : https://developer.riotgames.com/apis#match-v4</li>
-    <li>Lol-Status : https://developer.riotgames.com/apis#lol-status-v3</li>
     <li>Spectator-V4 : https://developer.riotgames.com/apis#spectator-v4</li>
   </ul>
   </div>
