@@ -14,6 +14,14 @@
     margin-right: 5px;
 }
 
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
 .tabcontent button {
   display:inline;
   float: center;
