@@ -46,3 +46,8 @@ button::-moz-focus-inner {
 #summonerIcon{
   padding-top: 5%;
 }
+
+.iconPic{
+  width: 70px;
+  height:auto;
+}
