@@ -62,3 +62,12 @@ button::-moz-focus-inner {
     justify-content:center;
     height: 70px;
 }
+
+.teams {
+  table-layout: auto;
+}
+
+.SummonerSpell{
+  height: 22px;
+  width: auto;
+}
