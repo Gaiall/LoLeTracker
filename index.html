@@ -9,9 +9,6 @@
     <link rel="stylesheet" type="text/css" href="CSS/footerStyle.css" title="Style">
     <link rel="stylesheet" type="text/css" href="CSS/sideBarStyle.css" title="Style">
     <link rel="stylesheet" type="text/css" href="CSS/tabStyle.css" title="Style">
-    <script src="Javascript/jquery.js"></script>
-    <script src="Javascript/chIdToName.js"></script>
-    <script src="Javascript/chNameToId.js"></script>
     <script>
         var apiKey;
         var summonerName;
@@ -19,6 +16,10 @@
     </script>
     <script src="Javascript/getSummonerIdbyName.js"></script>
     <script src="Javascript/getSummonerIcon.js"></script>
+    <script src="Javascript/tabList.js"></script>
+    <script src="Javascript/jquery.js"></script>
+    <script src="Javascript/chIdToName.js"></script>
+    <script src="Javascript/chNameToId.js"></script>
     <script>
         $.ajaxSetup({
             async: false
@@ -77,13 +78,12 @@
 
             <div class="wrapper contentCentered">
                 <div id="mainSearchar" class="mainSearchBar">
-                    <div id="summonerID"></div>
                     <div class="elementInLine">
                       <img id="summonerIcon" src="img/favicon.png" class="iconPic">
                     </div>
                     <script src="Javascript/getSummonerIcon.js"></script>
                     <form id="summonerNameSearch" method="get" class="elementInLine">
-                        <input id="summonerNameContainer" class="elementInLine searchBar" type="text" placeholder="Summoner...">
+                        <input id="summonerNameContainer" class="elementInLine searchBar" type="text" placeholder="Summoner..." autocomplete="off">
                     </form>
                     <button id="boutonSearch" class="elementInLine searchBar">Search</button>
                     <script src="Javascript/buttonPress.js"></script>

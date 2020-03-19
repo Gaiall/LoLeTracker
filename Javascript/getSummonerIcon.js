@@ -5,6 +5,7 @@ function getSummonerIcon(){
       var data = JSON.parse(this.response);
       let link ='./DATA/10.5.1/img/profileicon/'+data.profileIconId+'.png';
       document.getElementById("summonerIcon").src = link;
+      document.getElementById("summonerIcon").classList.add("rotationChampionPic");
     };
     request.send();
 }
