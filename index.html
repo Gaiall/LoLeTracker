@@ -1,233 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8"/>
-  <title>LoLe Tracker</title>
-  <link rel="icon" href="img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="CSS/mainStyle.css" title="Style">
-  <link rel="stylesheet" type="text/css" href="CSS/footerStyle.css" title="Style">
-  <link rel="stylesheet" type="text/css" href="CSS/sideBarStyle.css" title="Style">
-  <link rel="stylesheet" type="text/css" href="CSS/tabStyle.css" title="Style">
-  <script>
-  var apiKey;
-  var summonerName;
-  var summonerId;
-  </script>
-  <script src="Javascript/getSummonerIdbyName.js"></script>
-  <script src="Javascript/getSummonerIcon.js"></script>
-  <script src="Javascript/tabList.js"></script>
-  <script src="Javascript/jquery.js"></script>
-  <script src="Javascript/idToSummonerSpell.js"></script>
-  <script src="Javascript/chIdToName.js"></script>
-  <script src="Javascript/chNameToId.js"></script>
-  <script>
-  $.ajaxSetup({
-    async: false
-  });
-  $.getJSON("Javascript/apiKey.json", function(json) {
-    apiKey = json.apiKey;
-  });
-  </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <title>LoLe Tracker</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="CSS/mainStyle.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="CSS/footerStyle.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="CSS/sideBarStyle.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="CSS/tabStyle.css" title="Style">
+    <script>
+    var apiKey;
+    var summonerName;
+    var summonerId;
+    </script>
+    <script src="Javascript/getSummonerIdbyName.js"></script>
+    <script src="Javascript/getSummonerIcon.js"></script>
+    <script src="Javascript/tabList.js"></script>
+    <script src="Javascript/jquery.js"></script>
+    <script src="Javascript/idToSummonerSpell.js"></script>
+    <script src="Javascript/chIdToName.js"></script>
+    <script src="Javascript/chNameToId.js"></script>
+    <script>
+    $.ajaxSetup({
+        async: false
+    });
+    $.getJSON("Javascript/apiKey.json", function(json) {
+        apiKey = json.apiKey;
+    });
+    </script>
 </head>
 
 <body>
-  <div>
-  <!-- Barre latérale contenant les champions en rotation gratuite ainsi que le Status du Serveur -->
-  <div class="sideRotationChampions">
-  <div class="contentCentered">
-  <a>Server Status</a>
-  <p id="servStatusContainer"></p>
-  <script src="Javascript/loadStatus.js"></script>
-  <a>Champion Rotation</a>
-  <div id="0rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="1rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="2rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="3rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="4rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="5rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="6rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="7rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="8rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="9rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="10rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="11rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="12rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="13rcP" class="rotationChampionPic elementInLine"></div>
-  <div id="14rcP" class="rotationChampionPic elementInLine"></div>
-  <script src="Javascript/getFreeChampionRotation.js"></script>
-  <a>Champion Rotation for New Players</a>
-  <div id="0rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="1rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="2rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="3rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="4rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="5rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="6rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="7rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="8rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="9rcPN" class="rotationChampionPic elementInLine"></div>
-  <div id="10rcPN" class="rotationChampionPic elementInLine"></div>
-  <script src="Javascript/getFreeChampionRotationNewPlayers.js"></script>
-  </div>
-  </div>
+    <div>
+        <!-- Barre latérale contenant les champions en rotation gratuite ainsi que le Status du Serveur -->
+        <div class="sideRotationChampions">
+            <div class="contentCentered">
+                <a>Server Status</a>
+                <p id="servStatusContainer"></p>
+                <script src="Javascript/loadStatus.js"></script>
+                <a>Champion Rotation</a>
+                <div id="0rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="1rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="2rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="3rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="4rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="5rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="6rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="7rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="8rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="9rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="10rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="11rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="12rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="13rcP" class="rotationChampionPic elementInLine"></div>
+                <div id="14rcP" class="rotationChampionPic elementInLine"></div>
+                <script src="Javascript/getFreeChampionRotation.js"></script>
+                <a>Champion Rotation for New Players</a>
+                <div id="0rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="1rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="2rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="3rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="4rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="5rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="6rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="7rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="8rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="9rcPN" class="rotationChampionPic elementInLine"></div>
+                <div id="10rcPN" class="rotationChampionPic elementInLine"></div>
+                <script src="Javascript/getFreeChampionRotationNewPlayers.js"></script>
+            </div>
+        </div>
 
-  <!-- Page content -->
-  <div class="main">
-  <div class="contentCentered">
-  <h3 class="maintitle">LoLe Tracker</h3>
-  </div>
+        <!-- Page content -->
+        <div class="main">
+            <div class="contentCentered">
+                <h3 class="maintitle">LoLe Tracker</h3>
+            </div>
 
-  <div class="wrapper contentCentered">
-  <div id="mainSearchar" class="mainSearchBar">
-  <div class="searchBarContainer">
-  <div class="elementInLine">
-  <img id="summonerIcon" src="img/favicon.png" class="iconPic">
-  </div>
-  <div class="elementInLine">
-  <form id="summonerNameSearch" method="get" class="elementInLine">
-  <input id="summonerNameContainer" class="elementInLine searchBar" type="text" placeholder="Summoner..." autocomplete="off">
-  </form>
-  </div>
-  <div class="elementInLine">
-  <button id="boutonSearch" class="elementInLine searchBar">Search</button>
-  </div>
-  </div>
-  <script src="Javascript/buttonPress.js"></script>
-  <div>
-  <ul class="menuBar">
-  <li><button class="tablinks" onclick="openTab(event, 'Mastery')" id="defaultOpen">Mastery</button></li>
-  <li><button class="tablinks" onclick="openTab(event, 'History')">History</button></li>
-  <li><button class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button></li>
-  </ul>
+            <div class="wrapper contentCentered">
+                <div id="mainSearchar" class="mainSearchBar">
+                    <div class="searchBarContainer">
+                        <div class="elementInLine">
+                            <img id="summonerIcon" src="img/favicon.png" class="iconPic">
+                        </div>
+                        <div class="elementInLine">
+                            <form id="summonerNameSearch" method="get" class="elementInLine">
+                                <input id="summonerNameContainer" class="elementInLine searchBar" type="text" placeholder="Summoner..." autocomplete="off">
+                            </form>
+                        </div>
+                        <div class="elementInLine">
+                            <button id="boutonSearch" class="elementInLine searchBar">Search</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p id="summonerNameError" class="error"></p>
+                    </div>
+                    <script src="Javascript/buttonPress.js"></script>
+                    <div>
+                        <ul class="menuBar">
+                            <li><button class="tablinks" onclick="openTab(event, 'Mastery')" id="defaultOpen">Mastery</button></li>
+                            <li><button class="tablinks" onclick="openTab(event, 'History')">History</button></li>
+                            <li><button class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button></li>
+                        </ul>
 
-  <div id="Mastery" class="tabcontent">
-  <h3>Mastery</h3>
-  <ul>
-  <li>Champion 1</li>
-  <li>Champion 2</li>
-  <li>Champion 3</li>
-  </ul>
-  </div>
+                        <div id="Mastery" class="tabcontent">
+                            <h3>Mastery</h3>
+                            <ul>
+                                <li>Champion 1</li>
+                                <li>Champion 2</li>
+                                <li>Champion 3</li>
+                            </ul>
+                        </div>
 
-  <div id="History" class="tabcontent">
-  <h3>History</h3>
-  </div>
+                        <div id="History" class="tabcontent">
+                            <h3>History</h3>
+                        </div>
 
-  <div id="Spectate" class="tabcontent">
-    <h3>Spectate</h3>
-    <table>
-      <tr>
-        <th>Blue Team</th>
-        <th>Red Team</th>
-      </tr>
-      <tr>
-        <td>
-          <Table>
-          <tr>
-            <th>Name</th>
-            <th>Spells</th>
-            <th>Items</th>
-          </tr>
-          <tr>
-            <td>username1</td>
-            <td>
-            <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-            <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-          <tr>
-            <td>username2</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-          <tr>
-            <td>username3</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-          <tr>
-            <td>username4</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-          <tr>
-            <td>username5</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-        </table>
-        </td>
-        <td>
-          <Table>
-          <tr>
-            <th>Name</th>
-            <th>Spells</th>
-            <th>Items</th>
-          </tr>
-          <tr>
-            <td>username1</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-          <tr>
-            <td>username2</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-          <tr>
-            <td>username3</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-          <tr>
-            <td>username4</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-          <tr>
-            <td>username5</td>
-            <td>
-              <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-              <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-            </td>
-            <td>Items</td>
-          </tr>
-        </table>
-        </td>
-      </tr>
-    </Table>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="footer">
-  <p>LoLe Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
-  </div>
-  </body>
-</html>
+                        <div id="Spectate" class="tabcontent">
+                            <h3>Spectate</h3>
+                            <table>
+                                <tr>
+                                    <th>Blue Team</th>
+                                    <th>Red Team</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Table>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Spells</th>
+                                                <th>Items</th>
+                                            </tr>
+                                            <tr>
+                                                <td>username1</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                            <tr>
+                                                <td>username2</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                            <tr>
+                                                <td>username3</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                            <tr>
+                                                <td>username4</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                            <tr>
+                                                <td>username5</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <Table>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Spells</th>
+                                                <th>Items</th>
+                                            </tr>
+                                            <tr>
+                                                <td>username1</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                            <tr>
+                                                <td>username2</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                            <tr>
+                                                <td>username3</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                            <tr>
+                                                <td>username4</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                            <tr>
+                                                <td>username5</td>
+                                                <td>
+                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
+                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
+                                                </td>
+                                                <td>Items</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </Table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>LoLe Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+            </div>
+        </body>
+        </html>
