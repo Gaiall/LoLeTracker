@@ -15,4 +15,8 @@ function getSummonerIcon(){
         }
     };
     request.send();
+    if(request.status == 200)
+        return true;
+    else
+        return false;
 }

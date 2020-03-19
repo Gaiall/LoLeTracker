@@ -7,4 +7,8 @@ function getSummonerIDbyName(){
       summonerId = data.id;
     };
     request.send();
+    if(request.status == 200)
+        return true;
+    else
+        return false;
 }
