@@ -1,0 +1,28 @@
+.masteryLv1 {
+    width: 100%;
+    border-radius: 60%;
+}
+
+.masteryLv2 {
+    width: 100%;
+    border-radius: 60%;
+}
+
+.leftMastery {
+    float: left;
+    width: 30%;
+}
+
+.middleMastery {
+    float: left;
+    width: 30%;
+}
+
+.rightMastery {
+    float: left;
+    width: 30%;
+}
+
+.bestMastery {
+    
+}
