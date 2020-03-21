@@ -1,12 +1,12 @@
-.bestMastery {
+.masteries td{
     border: none;
 }
 
-.bestMastery th{
+.masteries th{
     border: none;
 }
 
-.bestMastery tr{
+.masteries tr{
     border: none;
 }
 
@@ -36,4 +36,34 @@
     text-align: left;
     vertical-align: bottom;
     width: 30%;
+}
+
+.allMastery {
+    border: 2px solid #42454D;
+}
+.allMastery tr{
+    border: 2px solid #42454D;
+}
+.allMastery td{
+    border: 2px solid #42454D;
+}
+
+.masteryIcon {
+    width: 5%;
+}
+
+.masteryIcon img {
+    width: 100%;
+}
+
+.masteryName {
+
+}
+
+.masteryLevel {
+    width: 5%;
+}
+
+.masteryPoint {
+    width: 15%;
 }
