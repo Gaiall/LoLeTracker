@@ -61,3 +61,22 @@ td {
 .itemsColumn{
   width: 100px;
 }
+
+.teamChampionPic{
+  width:70px;
+  height: auto;
+}
+
+.teams {
+  table-layout: auto;
+}
+
+.SummonerSpell{
+  height: 26px;
+  width: auto;
+}
+
+.runes{
+  height: 26px;
+  width: auto;
+}

@@ -64,20 +64,6 @@ button::-moz-focus-inner {
     height: 70px;
 }
 
-.teams {
-  table-layout: auto;
-}
-
-.SummonerSpell{
-  height: 22px;
-  width: auto;
-}
-
-.runes{
-  height: 22px;
-  width: auto;
-}
-
 .error {
     color: red;
 }
