@@ -11,21 +11,22 @@ function displaySpectators(){
   let nbRed = 0;
   let id = "";
   let res = "";
-  if(data.status.status_code == "200"){
+  if(request.status==200){
     for(let i = 0; i < 10; i++){
-      switch(data.participants[0].teamId){
+      switch(data.participants[i].teamId){
         case 100:
         nbBlue += 1;
         id="blue"+nbBlue+"ChampRaw";
         res = "";
         /*Champion*/
-        res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic"></td>';
+        res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic">'+chIdToName(data.participants[i].championId)+'</td>';
         /*Nom*/
         res += '<td>'+data.participants[i].summonerName+'</td>';
         /*Runes*/
-        res += '<td><img src="DATA/img/perk-images/Styles/7203_Whimsy.png" class="runes"><img src="DATA/img/perk-images/Styles/7204_Resolve.png" class="runes"></td>';
+        res += '<td><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkStyle)+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
         /*Summoner Spells*/
-        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2id)+'.png" class="SummonerSpell"></td>'
+        console.log(data.participants[i].spell1Id);
+        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
         /*OBJETS TODO*/
         res += "Les items."
         document.getElementById(id).innerHTML=res;
@@ -35,13 +36,13 @@ function displaySpectators(){
         id="red"+nbRed+"ChampRaw";
         res = "";
         /*Champion*/
-        res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic"></td>';
+        res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic">'+chIdToName(data.participants[i].championId)+'</td>';
         /*Nom*/
         res += '<td>'+data.participants[i].summonerName+'</td>';
         /*Runes TODO*/
-        res += '<td><img src="DATA/img/perk-images/Styles/7203_Whimsy.png" class="runes"><img src="DATA/img/perk-images/Styles/7204_Resolve.png" class="runes"></td>';
+        res += '<td><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkStyle)+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
         /*Summoner Spells*/
-        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2id)+'.png" class="SummonerSpell"></td>'
+        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
         /*OBJETS TODO*/
         res += "Les items."
         document.getElementById(id).innerHTML=res;

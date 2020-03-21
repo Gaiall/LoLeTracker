@@ -18,6 +18,7 @@
     var accountId;
     </script>
     <script src="Javascript/getAccountIdbyName.js"></script>
+    <script src="Javascript/runeIdToName.js"></script>
     <script src="Javascript/getSummonerIdbyName.js"></script>
     <script src="Javascript/getSummonerIcon.js"></script>
     <script src="Javascript/displaySpectators.js"></script>
@@ -163,12 +164,6 @@
                                 <p id="playerNotPlayingError" class="error"></p>
                             </div>
                             <table id="tableEquipes" class="mainTable">
-                                <!--
-                                <tr>
-                                    <th>Blue Team</th>
-                                    <th>Red Team</th>
-                                </tr>
-                                -->
                                 <tr>
                                     <td>
                                         <Table class="subTable blueTeam">
@@ -180,69 +175,14 @@
                                                 <th class="itemsColumn">Items</th>
                                             </tr>
                                             <tr id="blue1ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Aatrox.png" class="teamChampionPic"></td>
-                                                <td>username1</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7203_Whimsy.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7204_Resolve.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerTeleport.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                             <tr id="blue2ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Soraka.png" class="teamChampionPic"></td>
-                                                <td>username2</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7201_Precision.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7200_Domination.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                             <tr id="blue3ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Velkoz.png" class="teamChampionPic"></td>
-                                                <td>username3</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7200_Domination.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7201_Precision.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerBarrier.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                             <tr id="blue4ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Vi.png" class="teamChampionPic"></td>
-                                                <td>username4</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7202_Sorcery.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7203_Whimsy.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerHeal.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                             <tr id="blue5ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Fiddlesticks.png" class="teamChampionPic"></td>
-                                                <td>username5</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7200_Domination.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7203_Whimsy.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                         </table>
                                     </td>
@@ -256,69 +196,14 @@
                                               <th class="itemsColumn">Items</th>
                                             </tr>
                                             <tr id="red1ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Nasus.png" class="teamChampionPic"></td>
-                                                <td>username1</td>
-                                                <td>
-                                                    <img src="DATA/img/perk-images/Styles/7200_Domination.png" class="runes">
-                                                    <img src="DATA/img/perk-images/Styles/7201_Precision.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                             <tr id="red2ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Tristana.png" class="teamChampionPic"></td>
-                                                <td>username2</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7200_Domination.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7201_Precision.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                             <tr id="red3ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Veigar.png" class="teamChampionPic"></td>
-                                                <td>username3</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7200_Domination.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7201_Precision.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                             <tr id="red4ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Pantheon.png" class="teamChampionPic"></td>
-                                                <td>username4</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7200_Domination.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7201_Precision.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                             <tr id="red5ChampRaw">
-                                                <td><img src="DATA/10.5.1/img/champion/Pyke.png" class="teamChampionPic"></td>
-                                                <td>username5</td>
-                                                <td>
-                                                  <img src="DATA/img/perk-images/Styles/7200_Domination.png" class="runes">
-                                                  <img src="DATA/img/perk-images/Styles/7201_Precision.png" class="runes">
-                                                </td>
-                                                <td>
-                                                    <img src="DATA/10.5.1/img/spell/SummonerDot.png" class="SummonerSpell">
-                                                    <img src="DATA/10.5.1/img/spell/SummonerFlash.png" class="SummonerSpell">
-                                                </td>
-                                                <td>Items</td>
                                             </tr>
                                         </table>
                                     </td>
