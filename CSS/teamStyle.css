@@ -1,0 +1,43 @@
+th {
+  height: 50px;
+  border: 1px solid black;
+  color: white;
+}
+
+td {
+  height: 50px;
+}
+
+.mainTable {
+  width: 90%;
+  padding-left: 10%;
+}
+
+.subTable{
+  width: 100%;
+  border: 1px solid black;
+}
+
+.redTeam th{
+  background-color: #ff0000;
+}
+
+.blueTeam th{
+  background-color: #0000ff;
+}
+
+.blueTeam tr:nth-child(odd) {
+  background-color: #000088;
+}
+
+.blueTeam{
+  background-color: #0000aa;
+}
+
+.redTeam tr:nth-child(even) {
+  background-color: #880000;
+}
+
+.redTeam{
+  background-color: #aa0000;
+}
