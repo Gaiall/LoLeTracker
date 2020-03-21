@@ -11,9 +11,9 @@ function displaySpectators(){
   let nbRed = 0;
   let id = "";
   let res = "";
-  if(data.status.status_code == "200"){
+  if(request.status==200){
     for(let i = 0; i < 10; i++){
-      switch(data.participants[0].teamId){
+      switch(data.participants[i].teamId){
         case 100:
         nbBlue += 1;
         id="blue"+nbBlue+"ChampRaw";
@@ -25,7 +25,8 @@ function displaySpectators(){
         /*Runes*/
         res += '<td><img src="DATA/img/perk-images/Styles/7203_Whimsy.png" class="runes"><img src="DATA/img/perk-images/Styles/7204_Resolve.png" class="runes"></td>';
         /*Summoner Spells*/
-        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2id)+'.png" class="SummonerSpell"></td>'
+        console.log(data.participants[i].spell1Id);
+        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
         /*OBJETS TODO*/
         res += "Les items."
         document.getElementById(id).innerHTML=res;
@@ -41,7 +42,7 @@ function displaySpectators(){
         /*Runes TODO*/
         res += '<td><img src="DATA/img/perk-images/Styles/7203_Whimsy.png" class="runes"><img src="DATA/img/perk-images/Styles/7204_Resolve.png" class="runes"></td>';
         /*Summoner Spells*/
-        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2id)+'.png" class="SummonerSpell"></td>'
+        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
         /*OBJETS TODO*/
         res += "Les items."
         document.getElementById(id).innerHTML=res;
