@@ -10,13 +10,6 @@ document.getElementById("boutonSearch").onclick = function(){
     let gotIcon = getSummonerIcon();
     if(gotName && gotIcon){
       let playing = displaySpectator();
-      if(!playing){
-        /*La on met qu'il affiche rien dans le tableau des Spectate puisque le joueur ne joue pas*/
-        let lerreurSpectate = document.getElementById("playerNotPlayingError");
-        lerreurSpectate.innerHTML = "L'utilisateur n'est pas en train de jouer";
-        let tableauSpectate = document.getElementById("tableEquipes");
-        tableEquipes.style.display="none";
-      }
     }
     //On vérifie que le summoner existe, si oui, on continue d'appeler les fonctions
     if(gotName && gotIcon){

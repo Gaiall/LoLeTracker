@@ -53,6 +53,10 @@ function displaySpectator(){
     }
     return true;
   }else{
+    let lerreurSpectate = document.getElementById("playerNotPlayingError");
+    lerreurSpectate.innerHTML = "L'utilisateur n'est pas en train de jouer";
+    let tableauSpectate = document.getElementById("tableEquipes");
+    tableEquipes.style.display="none";
     return false;
   }
 }
