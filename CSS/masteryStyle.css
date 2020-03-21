@@ -1,28 +1,39 @@
+.bestMastery {
+    border: none;
+}
+
+.bestMastery th{
+    border: none;
+}
+
+.bestMastery tr{
+    border: none;
+}
+
 .masteryLv1 {
-    width: 100%;
+    width: 60%;
     border-radius: 60%;
 }
 
 .masteryLv2 {
-    width: 100%;
+    width: 50%;
     border-radius: 60%;
 }
 
 .leftMastery {
-    float: left;
+    text-align: right;
+    vertical-align: bottom;
     width: 30%;
 }
 
 .middleMastery {
-    float: left;
+    text-align: center;
+    vertical-align: bottom;
     width: 30%;
 }
 
 .rightMastery {
-    float: left;
+    text-align: left;
+    vertical-align: bottom;
     width: 30%;
-}
-
-.bestMastery {
-    
 }
