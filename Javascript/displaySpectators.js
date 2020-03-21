@@ -55,5 +55,4 @@ function displaySpectator(){
   }else{
     return false;
   }
-};
 }
