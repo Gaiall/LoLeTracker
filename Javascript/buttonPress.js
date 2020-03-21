@@ -17,6 +17,7 @@ document.getElementById("boutonSearch").onclick = function(){
         }
         //Les fonctions a appeler une fois qu'on a récupéré le nom et l'icone du summoner
         let gotId = getSummonerIDbyName();
+        let playing = displaySpectator();
 
     } else { //Si non, on annule tout
         let lesBouttons = document.getElementsByClassName("tablinks");
