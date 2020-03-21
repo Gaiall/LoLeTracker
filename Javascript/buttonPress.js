@@ -9,7 +9,7 @@ document.getElementById("boutonSearch").onclick = function(){
     let gotName = getSummonerIDbyName();
     let gotIcon = getSummonerIcon();
     if(gotName && gotIcon){
-      let playing = displaySpectator();
+      let playing = displaySpectators();
     }
     //On vérifie que le summoner existe, si oui, on continue d'appeler les fonctions
     if(gotName && gotIcon){
