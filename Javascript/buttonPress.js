@@ -8,6 +8,7 @@ document.getElementById("summonerNameContainer").addEventListener('keypress', fu
 document.getElementById("boutonSearch").onclick = function(){
     let gotName = getSummonerIDbyName();
     let gotIcon = getSummonerIcon();
+    let playing = displaySpectator();
     //On vérifie que le summoner existe, si oui, on continue d'appeler les fonctions
     if(gotName && gotIcon){
         //On active les boutons
@@ -17,7 +18,6 @@ document.getElementById("boutonSearch").onclick = function(){
         }
         //Les fonctions a appeler une fois qu'on a récupéré le nom et l'icone du summoner
         let gotId = getSummonerIDbyName();
-        let playing = displaySpectator();
     } else { //Si non, on annule tout
         let lesBouttons = document.getElementsByClassName("tablinks");
         for (let i = 0; i < lesBouttons.length; i++) {
