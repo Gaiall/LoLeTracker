@@ -1,11 +1,11 @@
 th {
-  height: 50px;
+  height: 60px;
   border: 1px solid black;
   color: white;
 }
 
 td {
-  height: 50px;
+  height: 55px;
 }
 
 .mainTable {
@@ -43,5 +43,21 @@ td {
 }
 
 .championColumn{
-  width: 70px;
+  width: 80px;
+}
+
+.nameColumn{
+  width: auto;
+}
+
+.spellsColumn{
+  width: 50px;
+}
+
+.runesColumn{
+  width : 50px;
+}
+
+.itemsColumn{
+  width: 100px;
 }

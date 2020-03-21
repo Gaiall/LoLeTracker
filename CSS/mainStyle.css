@@ -73,6 +73,11 @@ button::-moz-focus-inner {
   width: auto;
 }
 
+.runes{
+  height: 22px;
+  width: auto;
+}
+
 .error {
     color: red;
 }
