@@ -41,3 +41,7 @@ td {
 .redTeam{
   background-color: #aa0000;
 }
+
+.championColumn{
+  width: 70px;
+}
