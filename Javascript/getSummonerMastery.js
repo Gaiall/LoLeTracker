@@ -26,6 +26,7 @@ function getSummonerMastery(){
     if(request.status == 200){
         var tableau = document.getElementById("allMastery");
         tableau.innerHTML = "";
+        tableau.innerHTML = "<tr><th>Rank</th><th>Champion</th><th>Title</th><th>Level</th><th>Points</th><th>Progress</th></tr>";
         for (var i = 0; i < data.length; i++) {
             //On récupère les 3 premiers meilleurs champions
             var championName = chIdToName(data[i].championId)
@@ -42,36 +43,46 @@ function getSummonerMastery(){
                 default:
             }
             let newTr = document.createElement('tr'); //On crée la nouvelle ligne
-            let newTd0 = document.createElement('td'); //Colonne de l'image du perso
-                newTd0.innerHTML = i+1;
-            newTr.appendChild(newTd0);
-            let newTd1 = document.createElement('td'); //Colonne de l'image du perso
-                newTd1.classList.add("masteryIcon");
+            let newTdChampionRank = document.createElement('td'); //Colonne de l'image du perso
+                newTdChampionRank.innerHTML = i+1;
+            newTr.appendChild(newTdChampionRank);
+            let newTdChampionPic = document.createElement('td'); //Colonne de l'image du perso
+                newTdChampionPic.classList.add("masteryIcon");
                 let championImage = "DATA/img/champion/tiles/"+championName+"_0.jpg"
                 championImage = casParticulier(championName, championImage);
                 let baliseImage = document.createElement('img');
                 baliseImage.src = championImage;
-                newTd1.appendChild(baliseImage);
-            newTr.appendChild(newTd1);
-            let newTd2 = document.createElement('td');//Colonne du nom du perso
-                newTd2.classList.add("masteryName");
+                newTdChampionPic.appendChild(baliseImage);
+            newTr.appendChild(newTdChampionPic);
+            let newTdChampionNameTitle = document.createElement('td');//Colonne du nom du perso
+                newTdChampionNameTitle.classList.add("masteryName");
                 let leTexte = document.createElement('p');
                 let championTitle = getChampionTitle(championName);
                 leTexte.innerHTML = championName +" : "+championTitle;
-                newTd2.appendChild(leTexte);
-            newTr.appendChild(newTd2);
-            let newTd3 = document.createElement('td');//Colonne du niveau de maitrise
-                newTd3.classList.add("masteryLevel");
+                newTdChampionNameTitle.appendChild(leTexte);
+            newTr.appendChild(newTdChampionNameTitle);
+            /*Le niveau*/
+            let newTdMasteryLevel = document.createElement('td');//Colonne du niveau de maitrise
+                newTdMasteryLevel.classList.add("masteryLevel");
                 leTexte = document.createElement('p');
                 leTexte.innerHTML = data[i].championLevel;
-                newTd3.appendChild(leTexte);
-            newTr.appendChild(newTd3);
-            let newTd4 = document.createElement('td');
-                newTd4.classList.add("masteryPoint");
+                leTexte.innerHTML += '<img src="img/mastery'+data[i].championLevel+'.png" class="masteryLevelPic">'
+                newTdMasteryLevel.appendChild(leTexte);
+            newTr.appendChild(newTdMasteryLevel);
+            /*L'xp*/
+            let newTdMasteryPoints = document.createElement('td');
+                newTdMasteryPoints.classList.add("masteryPoint");
                 leTexte = document.createElement('p');
                 leTexte.innerHTML = data[i].championPoints;
-                newTd4.appendChild(leTexte);
-            newTr.appendChild(newTd4);
+                newTdMasteryPoints.appendChild(leTexte);
+            newTr.appendChild(newTdMasteryPoints);
+            /*La barre*/
+            let newTdMasteryPointsSLL = document.createElement('td');
+                newTdMasteryPointsSLL.classList.add("masteryPoint");
+                let xpNeeded = data[i].championPointsSinceLastLevel + data[i].championPointsUntilNextLevel;
+                leTexte.innerHTML='<td><progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'"></progress></td>'
+                //newTdMasteryPointsSLL.appendChild(leTexte);
+            newTr.innerHTML += leTexte;
             tableau.appendChild(newTr);
         }
     }

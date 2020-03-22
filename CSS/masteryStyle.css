@@ -54,6 +54,10 @@
     width: 10%;
 }
 
+.masteryLevelPic{
+    width: 95%;
+}
+
 #firstBest {
     border: 3px solid #FFD700;
 }
