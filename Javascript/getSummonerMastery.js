@@ -38,7 +38,7 @@ function getSummonerMastery(){
                 let leTexte = document.createElement('p');
                 let championTitle = getChampionTitle(championName)
                 console.log(championTitle);
-                leTexte.innerHTML = championName +" : "+getChampionTitle(championTitle);
+                leTexte.innerHTML = championName +" : "+getChampionTitle(championName);
                 newTd2.appendChild(leTexte);
             newTr.appendChild(newTd2);
             let newTd3 = document.createElement('td');//Colonne du niveau de maitrise
