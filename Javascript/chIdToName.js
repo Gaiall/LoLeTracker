@@ -31,7 +31,7 @@ function chIdToName(id){
     case 68 : return "Rumble"; break;
     case 82 : return "Mordekaiser"; break;
     case 37 : return "Sona"; break;
-    case 96 : return "Kogmaw"; break;
+    case 96 : return "KogMaw"; break;
     case 55 : return "Katarina"; break;
     case 117 : return "Lulu"; break;
     case 22 : return "Ashe"; break;
@@ -46,7 +46,7 @@ function chIdToName(id){
     case 134 : return "Syndra"; break;
     case 80 : return "Pantheon"; break;
     case 92 : return "Riven"; break;
-    case 121 : return "Khazix"; break;
+    case 121 : return "KhaZix"; break;
     case 42 : return "Corki"; break;
     case 268 : return "Azir"; break;
     case 51 : return "Caitlyn"; break;
@@ -70,7 +70,7 @@ function chIdToName(id){
     case 24 : return "Jax"; break;
     case 102 : return "Shyvana"; break;
     case 429 : return "Kalista"; break;
-    case 36 : return "Dr.Mundo"; break;
+    case 36 : return "DrMundo"; break;
     case 427 : return "Ivern"; break;
     case 131 : return "Diana"; break;
     case 223 : return "TahmKench"; break;
@@ -116,7 +116,7 @@ function chIdToName(id){
     case 6 : return "Urgot"; break;
     case 203 : return "Kindred"; break;
     case 21 : return "MissFortune"; break;
-    case 62 : return "Wukong"; break;
+    case 62 : return "MonkeyKing"; break;
     case 53 : return "Blitzcrank"; break;
     case 98 : return "Shen"; break;
     case 201 : return "Braum"; break;
