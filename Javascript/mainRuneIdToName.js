@@ -43,7 +43,7 @@ function mainRuneIdToName(id){
     /*SORCERY*/
     case 8299 : return "Sorcery/LastStand/LastStand"; break;
     case 8242 : return "Sorcery/Unflinching/Unflinching"; break;
-    case 8214 return "Sorcery/SummonAery/SummonAery"; break;
+    case 8214 : return "Sorcery/SummonAery/SummonAery"; break;
     case 8229 : return "Sorcery/ArcaneComet/ArcaneComet"; break;
     case 8230 : return "Sorcery/PhaseRush/PhaseRush"; break;
     case 8224 : return "Sorcery/NullifyingOrb/Pokeshield"; break;
