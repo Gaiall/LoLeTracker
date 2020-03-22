@@ -58,6 +58,11 @@
     width: 95%;
 }
 
+.chestPic{
+    width : 70px;
+    height: auto;
+}
+
 #firstBest {
     border: 3px solid #FFD700;
 }
