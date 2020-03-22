@@ -42,6 +42,9 @@ function getSummonerMastery(){
                 default:
             }
             let newTr = document.createElement('tr'); //On crée la nouvelle ligne
+            let newTd0 = document.createElement('td'); //Colonne de l'image du perso
+                newTd0.innerHTML = i+1;
+            newTr.appendChild(newTd0);
             let newTd1 = document.createElement('td'); //Colonne de l'image du perso
                 newTd1.classList.add("masteryIcon");
                 let championImage = "DATA/img/champion/tiles/"+championName+"_0.jpg"
