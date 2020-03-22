@@ -26,7 +26,29 @@ function getSummonerMastery(){
     if(request.status == 200){
         var tableau = document.getElementById("allMastery");
         tableau.innerHTML = "";
-        tableau.innerHTML = "<tr><th>Rank</th><th>Champion</th><th>Title</th><th>Level</th><th>Points</th><th>Progress</th><th>Chest</th></tr>";
+        let headerTr = document.createElement('tr');
+        let th1 = document.createElement('th');
+            th1.innerHTML = "Rank";
+            headerTr.appendChild(th1);
+        let th2= document.createElement('th');
+            th2.innerHTML = "Champion";
+            headerTr.appendChild(th2);
+        let th3 = document.createElement('th');
+            th3.innerHTML = "Title";
+            headerTr.appendChild(th3);
+        let th4 = document.createElement('th');
+            th4.innerHTML = "Level";
+            headerTr.appendChild(th4);
+        let th5 = document.createElement('th');
+            th5.innerHTML = "Points";
+            headerTr.appendChild(th5);
+        let th6 = document.createElement('th');
+            th6.innerHTML = "Progress";
+            headerTr.appendChild(th6);
+        let th7 = document.createElement('th');
+            th7.innerHTML = "Chest";
+            headerTr.appendChild(th7);
+        tableau.appendChild(headerTr);
         for (var i = 0; i < data.length; i++) {
             //On récupère les 3 premiers meilleurs champions
             var championName = chIdToName(data[i].championId)
@@ -43,65 +65,63 @@ function getSummonerMastery(){
                 default:
             }
             let newTr = document.createElement('tr'); //On crée la nouvelle ligne
-            newTr.innerHTML = "";
             /*Le rank*/
-            newTr.innerHTML += "<td>"+(i+1)+"</td>";
-            /*let newTdChampionRank = document.createElement('td');
+            let newTdChampionRank = document.createElement('td');
                 newTdChampionRank.innerHTML = i+1;
-            newTr.appendChild(newTdChampionRank);*/
+            newTr.appendChild(newTdChampionRank);
             /*L'image*/
             let imgUrl = "DATA/img/champion/tiles/"+championName+"_0.jpg";
             imgUrl = casParticulier(championName, imgUrl);
-            newTr.innerHTML +='<td class="masteryIcon"><img src="'+imgUrl+'"></td>';
-            /*let newTdChampionPic = document.createElement('td');
+            newTdChampionPic = document.createElement('td');
                 newTdChampionPic.classList.add("masteryIcon");
                 let championImage = "DATA/img/champion/tiles/"+championName+"_0.jpg"
                 championImage = casParticulier(championName, championImage);
                 let baliseImage = document.createElement('img');
                 baliseImage.src = championImage;
                 newTdChampionPic.appendChild(baliseImage);
-            newTr.appendChild(newTdChampionPic);*/
+            newTr.appendChild(newTdChampionPic);
             /*Le nom et Titre*/
-            newTr.innerHTML += '<td class="masteryName">'+championName + " - " + getChampionTitle(championName)+"</td>";
-            /*let newTdChampionNameTitle = document.createElement('td');
+            let newTdChampionNameTitle = document.createElement('td');
                 newTdChampionNameTitle.classList.add("masteryName");
                 let leTexte = document.createElement('p');
                 let championTitle = getChampionTitle(championName);
                 leTexte.innerHTML = championName +" : "+championTitle;
                 newTdChampionNameTitle.appendChild(leTexte);
-            newTr.appendChild(newTdChampionNameTitle);*/
+            newTr.appendChild(newTdChampionNameTitle);
             /*Le niveau*/
-            newTr.innerHTML += '<td class="masteryLevel">'+data[i].championLevel+'<img src="img/mastery'+data[i].championLevel+'.png" class="masteryLevelPic">'+'</td>'
-            /*let newTdMasteryLevel = document.createElement('td');//Colonne du niveau de maitrise
+            let newTdMasteryLevel = document.createElement('td');//Colonne du niveau de maitrise
                 newTdMasteryLevel.classList.add("masteryLevel");
                 leTexte = document.createElement('p');
                 leTexte.innerHTML = data[i].championLevel;
-                leTexte.innerHTML += '<img src="img/mastery'+data[i].championLevel+'.png" class="masteryLevelPic">'
+                leTexte.style.marginBottom = "0px";
+                let imageMaitrise = document.createElement('img');
+                imageMaitrise.src = "img/mastery"+data[i].championLevel+".png"
+                imageMaitrise.classList.add("masteryLevelPic");
                 newTdMasteryLevel.appendChild(leTexte);
-            newTr.appendChild(newTdMasteryLevel);*/
+                newTdMasteryLevel.appendChild(imageMaitrise);
+            newTr.appendChild(newTdMasteryLevel);
             /*L'xp*/
-            newTr.innerHTML += '<td>'+data[i].championPoints+'</td>';
-            /*let newTdMasteryPoints = document.createElement('td');
+            let newTdMasteryPoints = document.createElement('td');
                 newTdMasteryPoints.classList.add("masteryPoint");
                 leTexte = document.createElement('p');
                 leTexte.innerHTML = data[i].championPoints;
                 newTdMasteryPoints.appendChild(leTexte);
-            newTr.appendChild(newTdMasteryPoints);*/
+            newTr.appendChild(newTdMasteryPoints);
             /*La barre*/
+            /*On garde le code qui pue de David parce que je sais pas aligner des élements correctement avec le css*/
             let xpNeeded = data[i].championPointsSinceLastLevel + data[i].championPointsUntilNextLevel;
             newTr.innerHTML += '<td>'+data[i].championPointsSinceLastLevel+'  <progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'"></progress>  '+xpNeeded+'</td>';
-            /*let newTdMasteryPointsSLL = document.createElement('td');
-                newTdMasteryPointsSLL.classList.add("masteryPoint");
-                let xpNeeded = data[i].championPointsSinceLastLevel + data[i].championPointsUntilNextLevel;
-                leTexte.innerHTML='<td><progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'"></progress></td>'
-                //newTdMasteryPointsSLL.appendChild(leTexte);
-            newTr.innerHTML += leTexte;*/
             /*Le coffre*/
-            let coffreUrl = "img/ChestNotGranted.png";
-            if(data[i].chestGranted){
-                coffreUrl = "img/ChestGranted.png";
-            }
-            newTr.innerHTML += '<td><img src="'+coffreUrl+'" class="chestPic"></td>'
+            let newTdChest = document.createElement('td');
+                let chestUrl = "img/ChestNotGranted.png";
+                if(data[i].chestGranted){
+                    chestUrl = "img/ChestGranted.png";
+                }
+                let imgChest = document.createElement('img');
+                imgChest.src = chestUrl;
+                imgChest.classList.add("chestPic");
+                newTdChest.appendChild(imgChest);
+            newTr.appendChild(newTdChest);
             tableau.appendChild(newTr);
         }
     }
