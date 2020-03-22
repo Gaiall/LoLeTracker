@@ -18,7 +18,6 @@ document.getElementById("boutonSearch").onclick = function(){
         for (let i = 0; i < lesBouttons.length; i++) {
             lesBouttons[i].disabled = false;
         }
-        lesBouttons[0].click();
         //Les fonctions a appeler une fois qu'on a récupéré le nom et l'icone du summoner
         let gotId = getSummonerIDbyName();
         getSummonerMastery();

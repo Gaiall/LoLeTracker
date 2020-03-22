@@ -4,7 +4,6 @@ function getSummonerMastery(){
     var data;
     request.onload = function(){
         data = JSON.parse(this.response);
-        console.log(data);
     }
     request.send();
     if(request.status == 200){
@@ -37,8 +36,7 @@ function getSummonerMastery(){
                 newTd2.classList.add("masteryName");
                 let leTexte = document.createElement('p');
                 let championTitle = getChampionTitle(championName);
-                console.log(getChampionTitle(championName));
-                leTexte.innerHTML = championName +" : "+getChampionTitle(championName);
+                leTexte.innerHTML = championName +" : "+championTitle;
                 newTd2.appendChild(leTexte);
             newTr.appendChild(newTd2);
             let newTd3 = document.createElement('td');//Colonne du niveau de maitrise
