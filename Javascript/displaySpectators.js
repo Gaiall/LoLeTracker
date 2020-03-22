@@ -25,7 +25,7 @@ function displaySpectators(){
         /*Nom*/
         res += '<td>'+data.participants[i].summonerName+'</td>';
         /*Runes*/
-        res += '<td><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkStyle)+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
+        res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].perks.perkIds[0])+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
         /*Summoner Spells*/
         console.log(data.participants[i].spell1Id);
         res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
@@ -42,7 +42,7 @@ function displaySpectators(){
         /*Nom*/
         res += '<td>'+data.participants[i].summonerName+'</td>';
         /*Runes TODO*/
-        res += '<td><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkStyle)+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
+        res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].perks.perkIds[0])+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
         /*Summoner Spells*/
         res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
         /*OBJETS TODO*/
