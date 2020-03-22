@@ -107,7 +107,7 @@ function getChampionTitle(championName){
             case "Orianna" : championTitle =  json.data.Orianna.title; break;
             case "Fiora" : championTitle =  json.data.Fiora.title; break;
             case "Fiddlesticks" : championTitle =  json.data.Fiddlesticks.title; break;
-            case "ChoGath" : championTitle =  json.data.ChoGath.title; break;
+            case "Chogath" : championTitle =  json.data.Chogath.title; break;
             case "Rammus" : championTitle =  json.data.Rammus.title; break;
             case "LeBlanc" : championTitle =  json.data.Leblanc.title; break;
             case "Soraka" : championTitle =  json.data.Soraka.title; break;
@@ -130,7 +130,7 @@ function getChampionTitle(championName){
             case "Gangplank" : championTitle =  json.data.Gangplank.title; break;
             case "Trundle" : championTitle =  json.data.Trundle.title; break;
             case "Kassadin" : championTitle =  json.data.Kassadin.title; break;
-            case "VelKoz" : championTitle =  json.data.VelKoz.title; break;
+            case "Velkoz" : championTitle =  json.data.Velkoz.title; break;
             case "Zyra" : championTitle =  json.data.Zyra.title; break;
             case "Nami" : championTitle =  json.data.Nami.title; break;
             case "JarvanIV" : championTitle =  json.data.JarvanIV.title; break;
@@ -144,7 +144,7 @@ function getChampionTitle(championName){
             case "Sylas" : championTitle =  json.data.Sylas.title; break;
             case "Neeko" : championTitle =  json.data.Neeko.title; break;
             case "Pyke" : championTitle =  json.data.Pyke.title; break;
-            case "KaiSa" : championTitle =  json.data.KaiSa.title; break;
+            case "Kaisa" : championTitle =  json.data.Kaisa.title; break;
             case "Zoe" : championTitle =  json.data.Zoe.title; break;
             case "Ornn" : championTitle =  json.data.Ornn.title; break;
             case "Kayn" : championTitle =  json.data.Kayn.title; break;

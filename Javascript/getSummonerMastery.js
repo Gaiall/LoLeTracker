@@ -1,3 +1,20 @@
+function casParticulier(championName, championImage){
+    switch(championName) {
+        case "LeBlanc":
+            championImage = "DATA/img/champion/tiles/Leblanc_0.jpg"
+            break;
+        case "KhaZix":
+            championImage = "DATA/img/champion/tiles/Khazix_0.jpg"
+            break;
+        case "Fiddlesticks":
+            championImage = "DATA/img/champion/tiles/FiddleSticks_0.jpg"
+            break;
+        default:
+
+    }
+    return championImage;
+}
+
 function getSummonerMastery(){
     var request = new XMLHttpRequest();
     request.open("GET","https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/"+summonerId+"?api_key="+apiKey, false);
@@ -28,6 +45,7 @@ function getSummonerMastery(){
             let newTd1 = document.createElement('td'); //Colonne de l'image du perso
                 newTd1.classList.add("masteryIcon");
                 let championImage = "DATA/img/champion/tiles/"+championName+"_0.jpg"
+                championImage = casParticulier(championName, championImage);
                 let baliseImage = document.createElement('img');
                 baliseImage.src = championImage;
                 newTd1.appendChild(baliseImage);

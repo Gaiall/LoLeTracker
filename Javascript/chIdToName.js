@@ -78,7 +78,7 @@ function chIdToName(id){
     case 113 : return "Sejuani"; break;
     case 8 : return "Vladimir"; break;
     case 154 : return "Zac"; break;
-    case 421 : return "Reksai"; break;
+    case 421 : return "RekSai"; break;
     case 133 : return "Quinn"; break;
     case 84 : return "Akali"; break;
     case 163 : return "Taliyah"; break;

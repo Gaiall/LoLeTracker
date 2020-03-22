@@ -6,6 +6,7 @@ document.getElementById("summonerNameContainer").addEventListener('keypress', fu
 });
 
 document.getElementById("boutonSearch").onclick = function(){
+    document.getElementById("Chargement").style.visibility = "visible";
     let gotName = getSummonerIDbyName();
     let gotIcon = getSummonerIcon();
     if(gotName && gotIcon){
@@ -33,4 +34,5 @@ document.getElementById("boutonSearch").onclick = function(){
           tabcontent[i].style.display = "none";
         }
     }
+    document.getElementById("Chargement").style.visibility = "hidden";
 }
