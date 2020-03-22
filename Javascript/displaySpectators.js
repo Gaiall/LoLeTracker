@@ -54,12 +54,12 @@ function displaySpectators(){
         return false;
         break;
       }
-      tableEquipes.style.display="block";
-      lerreurSpectate.style.display="none";
+      tableEquipes.style.visibility="visible";
+      lerreurSpectate.style.visibility="hidden";
     }
     return true;
   }else{
-    tableEquipes.style.display="none";
+    tableEquipes.style.visibility="hidden";
     switch(request.status){
       case 400:
         lerreurSpectate.innerHTML = "Bad Request.";
@@ -95,6 +95,7 @@ function displaySpectators(){
         lerreurSpectate.innerHTML = "Gateway Timeout.";
       break;
     }
+    lerreurSpectate.style.visibility="visible";
     return false;
   }
 }
