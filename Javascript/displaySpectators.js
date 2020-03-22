@@ -6,7 +6,6 @@ function displaySpectators(){
     data = JSON.parse(this.response);
   }
   request.send();
-  let color = "red";
   let nbBlue = 0;
   let nbRed = 0;
   let id = "";
@@ -14,49 +13,39 @@ function displaySpectators(){
   let errorDiv = document.getElementById("playerNotPlayingError");
   let tableauSpectate = document.getElementById("tableEquipes");
   if(request.status==200){
-    for(let i = 0; i < 10; i++){
+    for(let i = 0; i < data.participants.length; i++){
       switch(data.participants[i].teamId){
         case 100:
         nbBlue += 1;
         id="blue"+nbBlue+"ChampRaw";
-        res = "";
-        /*Champion*/
-        res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic">'+chIdToName(data.participants[i].championId)+'</td>';
-        /*Nom*/
-        res += '<td>'+data.participants[i].summonerName+'</td>';
-        /*Runes*/
-        res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].perks.perkIds[0])+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
-        /*Summoner Spells*/
-        console.log(data.participants[i].spell1Id);
-        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
-        /*OBJETS TODO*/
-        res += "Les items."
-        document.getElementById(id).innerHTML=res;
         break;
         case 200:
         nbRed += 1;
         id="red"+nbRed+"ChampRaw";
-        res = "";
-        /*Champion*/
-        res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic">'+chIdToName(data.participants[i].championId)+'</td>';
-        /*Nom*/
-        res += '<td>'+data.participants[i].summonerName+'</td>';
-        /*Runes TODO*/
-        res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].perks.perkIds[0])+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
-        /*Summoner Spells*/
-        res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
-        /*OBJETS TODO*/
-        res += "Les items."
-        document.getElementById(id).innerHTML=res;
-
         break;
         default:
         return false;
         break;
       }
-      tableEquipes.style.visibility="visible";
-      errorDiv.style.visibility="hidden";
+      res = "";
+      /*Champion*/
+      res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic">'+chIdToName(data.participants[i].championId)+'</td>';
+      /*Nom*/
+      res += '<td>'+data.participants[i].summonerName+'</td>';
+      /*Runes TODO*/
+      res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].perks.perkIds[0])+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
+      /*Summoner Spells*/
+      res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
+      /*OBJETS TODO*/
+      /*console.log(data.participants[i].gameCustomizationObjects);
+      for(let j = 0; j < data.participants[i].gameCustomizationObjects.length; j++){
+          console.log(data.participants[i].gameCustomizationObjects[j]);
+          res += '<td><img src="DATA/10.5.1/img/items/'+"1055"+'".png class="items">'
+      }*/
+      document.getElementById(id).innerHTML=res;
     }
+    tableEquipes.style.visibility="visible";
+    errorDiv.style.visibility="hidden";
     return true;
   }else{
     tableEquipes.style.visibility="hidden";
