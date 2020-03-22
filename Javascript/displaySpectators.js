@@ -54,22 +54,22 @@ function displaySpectators(){
         errorDiv.innerHTML = "Bad Request.";
       break;
       case 404:
-        errorDiv.innerHTML = "L'utilisateur n'est pas en train de jouer.";
+        errorDiv.innerHTML = "This user is not currently playing.";
       break;
       case 401:
-        errorDiv.innerHTML = "Requête non autorisée.";
+        errorDiv.innerHTML = "Unauthorised Request.";
       break;
       case 403:
-        errorDiv.innerHTML = "Requête interdite.";
+        errorDiv.innerHTML = "Forbidden Request.";
       break;
       case 405:
-        errorDiv.innerHTML = "Méthode non autorisée.";
+        errorDiv.innerHTML = "Unauthorised Method.";
       break;
       case 415:
-        errorDiv.innerHTML = "Média non supporté.";
+        errorDiv.innerHTML = "Unsupported media type.";
       break;
       case 429:
-        errorDiv.innerHTML = "Trop de requêtes.";
+        errorDiv.innerHTML = "Rate limit exceeded.";
       break;
       case 500:
         errorDiv.innerHTML = "Internal Server Error.";
@@ -78,7 +78,7 @@ function displaySpectators(){
         errorDiv.innerHTML = "Bad Gateway.";
       break;
       case 503:
-        errorDiv.innerHTML = "Service non disponible.";
+        errorDiv.innerHTML = "Service unavailable.";
       break;
       case 504:
         errorDiv.innerHTML = "Gateway Timeout.";
