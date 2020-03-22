@@ -109,6 +109,7 @@ function getSummonerMastery(){
             newTr.appendChild(newTdMasteryPoints);
             /*La barre*/
             /*On garde le code qui pue de David parce que je sais pas aligner des élements correctement avec le css*/
+            /*(grosse merde)*/
             let xpNeeded = data[i].championPointsSinceLastLevel + data[i].championPointsUntilNextLevel;
             newTr.innerHTML += '<td>'+data[i].championPointsSinceLastLevel+'  <progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'"></progress>  '+xpNeeded+'</td>';
             /*Le coffre*/
