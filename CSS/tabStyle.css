@@ -52,10 +52,12 @@ ul.menuBar {
 	display: table;*/ /* ul.menuBar will behave like a table now */
 
 	text-align: center;
+    padding-left: 28%;
 }
 
 ul.menuBar li {
-	/* float: left; */
+    padding-left: 10%;
+	float: left;
 	display: inline-block;
 }
 
@@ -82,4 +84,9 @@ ul.menuBar li button {
 ul.menuBar li a:hover {
 	background: #e4e4e4;
 	color: #333;
+}
+
+.active {
+    background: #FFA500 !important;
+    color: #333 !important;
 }

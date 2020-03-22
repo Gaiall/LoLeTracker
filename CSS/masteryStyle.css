@@ -67,3 +67,15 @@
 .masteryPoint {
     width: 15%;
 }
+
+#firstBest {
+    border: 2px solid #FFD700;
+}
+
+#secondBest {
+    border: 2px solid #C0C0C0;
+}
+
+#thirdBest {
+    border: 2px solid #cd7f32;
+}
