@@ -31,7 +31,7 @@ function chIdToName(id){
     case 68 : return "Rumble"; break;
     case 82 : return "Mordekaiser"; break;
     case 37 : return "Sona"; break;
-    case 96 : return "KogMaw"; break;
+    case 96 : return "Kogmaw"; break;
     case 55 : return "Katarina"; break;
     case 117 : return "Lulu"; break;
     case 22 : return "Ashe"; break;
@@ -46,7 +46,7 @@ function chIdToName(id){
     case 134 : return "Syndra"; break;
     case 80 : return "Pantheon"; break;
     case 92 : return "Riven"; break;
-    case 121 : return "KhaZix"; break;
+    case 121 : return "Khazix"; break;
     case 42 : return "Corki"; break;
     case 268 : return "Azir"; break;
     case 51 : return "Caitlyn"; break;
@@ -78,7 +78,7 @@ function chIdToName(id){
     case 113 : return "Sejuani"; break;
     case 8 : return "Vladimir"; break;
     case 154 : return "Zac"; break;
-    case 421 : return "RekSai"; break;
+    case 421 : return "Reksai"; break;
     case 133 : return "Quinn"; break;
     case 84 : return "Akali"; break;
     case 163 : return "Taliyah"; break;
@@ -105,7 +105,7 @@ function chIdToName(id){
     case 61 : return "Orianna"; break;
     case 114 : return "Fiora"; break;
     case 9 : return "Fiddlesticks"; break;
-    case 31 : return "ChoGath"; break;
+    case 31 : return "Chogath"; break;
     case 33 : return "Rammus"; break;
     case 7 : return "LeBlanc"; break;
     case 16 : return "Soraka"; break;
@@ -128,7 +128,7 @@ function chIdToName(id){
     case 41 : return "Gangplank"; break;
     case 48 : return "Trundle"; break;
     case 38 : return "Kassadin"; break;
-    case 161 : return "VelKoz"; break;
+    case 161 : return "Velkoz"; break;
     case 143 : return "Zyra"; break;
     case 267 : return "Nami"; break;
     case 59 : return "JarvanIV"; break;
@@ -142,7 +142,7 @@ function chIdToName(id){
     case 517 : return "Sylas"; break;
     case 518 : return "Neeko"; break;
     case 555 : return "Pyke"; break;
-    case 145 : return "KaiSa"; break;
+    case 145 : return "Kaisa"; break;
     case 142 : return "Zoe"; break;
     case 516 : return "Ornn"; break;
     case 141 : return "Kayn"; break;
