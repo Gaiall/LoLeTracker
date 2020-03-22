@@ -36,8 +36,8 @@ function getSummonerMastery(){
             let newTd2 = document.createElement('td');//Colonne du nom du perso
                 newTd2.classList.add("masteryName");
                 let leTexte = document.createElement('p');
-                let championTitle = getChampionTitle(championName)
-                console.log(championTitle);
+                let championTitle = getChampionTitle(championName);
+                console.log(getChampionTitle(championName));
                 leTexte.innerHTML = championName +" : "+getChampionTitle(championName);
                 newTd2.appendChild(leTexte);
             newTr.appendChild(newTd2);
