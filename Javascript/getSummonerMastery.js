@@ -31,10 +31,10 @@ function getSummonerMastery(){
             th1.innerHTML = "Rank";
             headerTr.appendChild(th1);
         let th2= document.createElement('th');
-            th2.innerHTML = "Champion";
+            th2.innerHTML = "       ";
             headerTr.appendChild(th2);
         let th3 = document.createElement('th');
-            th3.innerHTML = "Title";
+            th3.innerHTML = "Champion Name";
             headerTr.appendChild(th3);
         let th4 = document.createElement('th');
             th4.innerHTML = "Level";
@@ -94,6 +94,7 @@ function getSummonerMastery(){
                 leTexte = document.createElement('p');
                 leTexte.innerHTML = data[i].championLevel;
                 leTexte.style.marginBottom = "0px";
+                leTexte.style.marginTop = "0px";
                 let imageMaitrise = document.createElement('img');
                 imageMaitrise.src = "img/mastery"+data[i].championLevel+".png"
                 imageMaitrise.classList.add("masteryLevelPic");
@@ -110,7 +111,12 @@ function getSummonerMastery(){
             /*La barre*/
             /*On garde le code qui pue de David parce que je sais pas aligner des élements correctement avec le css*/
             let xpNeeded = data[i].championPointsSinceLastLevel + data[i].championPointsUntilNextLevel;
-            newTr.innerHTML += '<td>'+data[i].championPointsSinceLastLevel+'  <progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'"></progress>  '+xpNeeded+'</td>';
+            let newTdXp = '<td>'+data[i].championPointsSinceLastLevel+'  <progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'"></progress>  '+xpNeeded+'</td>';
+            if(data[i].championPointsSinceLastLevel == xpNeeded)
+                newTdXp = "<td><p>No XP needed</p></td>";
+            if(data[i].championLevel == 7)
+                newTdXp = "<td><p>Level Max reached !</p></td>";
+            newTr.innerHTML += newTdXp;
             /*Le coffre*/
             let newTdChest = document.createElement('td');
                 let chestUrl = "img/ChestNotGranted.png";
