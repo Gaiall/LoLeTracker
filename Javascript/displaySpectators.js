@@ -11,7 +11,7 @@ function displaySpectators(){
   let nbRed = 0;
   let id = "";
   let res = "";
-  let lerreurSpectate = document.getElementById("playerNotPlayingError");
+  let errorDiv = document.getElementById("playerNotPlayingError");
   let tableauSpectate = document.getElementById("tableEquipes");
   if(request.status==200){
     for(let i = 0; i < 10; i++){
@@ -55,47 +55,47 @@ function displaySpectators(){
         break;
       }
       tableEquipes.style.visibility="visible";
-      lerreurSpectate.style.visibility="hidden";
+      errorDiv.style.visibility="hidden";
     }
     return true;
   }else{
     tableEquipes.style.visibility="hidden";
     switch(request.status){
       case 400:
-        lerreurSpectate.innerHTML = "Bad Request.";
+        errorDiv.innerHTML = "Bad Request.";
       break;
       case 404:
-        lerreurSpectate.innerHTML = "L'utilisateur n'est pas en train de jouer.";
+        errorDiv.innerHTML = "L'utilisateur n'est pas en train de jouer.";
       break;
       case 401:
-        lerreurSpectate.innerHTML = "Requête non autorisée.";
+        errorDiv.innerHTML = "Requête non autorisée.";
       break;
       case 403:
-        lerreurSpectate.innerHTML = "Requête interdite.";
+        errorDiv.innerHTML = "Requête interdite.";
       break;
       case 405:
-        lerreurSpectate.innerHTML = "Méthode non autorisée.";
+        errorDiv.innerHTML = "Méthode non autorisée.";
       break;
       case 415:
-        lerreurSpectate.innerHTML = "Média non supporté.";
+        errorDiv.innerHTML = "Média non supporté.";
       break;
       case 429:
-        lerreurSpectate.innerHTML = "Trop de requêtes.";
+        errorDiv.innerHTML = "Trop de requêtes.";
       break;
       case 500:
-        lerreurSpectate.innerHTML = "Internal Server Error.";
+        errorDiv.innerHTML = "Internal Server Error.";
       break;
       case 502:
-        lerreurSpectate.innerHTML = "Bad Gateway.";
+        errorDiv.innerHTML = "Bad Gateway.";
       break;
       case 503:
-        lerreurSpectate.innerHTML = "Service non disponible.";
+        errorDiv.innerHTML = "Service non disponible.";
       break;
       case 504:
-        lerreurSpectate.innerHTML = "Gateway Timeout.";
+        errorDiv.innerHTML = "Gateway Timeout.";
       break;
     }
-    lerreurSpectate.style.visibility="visible";
+    errorDiv.style.visibility="visible";
     return false;
   }
 }
