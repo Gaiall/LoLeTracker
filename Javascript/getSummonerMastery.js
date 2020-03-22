@@ -67,7 +67,7 @@ function getSummonerMastery(){
                 newTd3.appendChild(leTexte);
             newTr.appendChild(newTd3);
             let newTd4 = document.createElement('td');
-                newTd4.classList.add("masteryLevel");
+                newTd4.classList.add("masteryPoint");
                 leTexte = document.createElement('p');
                 leTexte.innerHTML = data[i].championPoints;
                 newTd4.appendChild(leTexte);
