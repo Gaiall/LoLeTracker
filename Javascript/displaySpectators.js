@@ -11,6 +11,8 @@ function displaySpectators(){
   let nbRed = 0;
   let id = "";
   let res = "";
+  let lerreurSpectate = document.getElementById("playerNotPlayingError");
+  let tableauSpectate = document.getElementById("tableEquipes");
   if(request.status==200){
     for(let i = 0; i < 10; i++){
       switch(data.participants[i].teamId){
@@ -46,18 +48,53 @@ function displaySpectators(){
         /*OBJETS TODO*/
         res += "Les items."
         document.getElementById(id).innerHTML=res;
+
         break;
         default:
         return false;
         break;
       }
+      tableEquipes.style.display="block";
+      lerreurSpectate.style.display="none";
     }
     return true;
   }else{
-    let lerreurSpectate = document.getElementById("playerNotPlayingError");
-    lerreurSpectate.innerHTML = "L'utilisateur n'est pas en train de jouer";
-    let tableauSpectate = document.getElementById("tableEquipes");
     tableEquipes.style.display="none";
+    switch(request.status){
+      case 400:
+        lerreurSpectate.innerHTML = "Bad Request.";
+      break;
+      case 404:
+        lerreurSpectate.innerHTML = "L'utilisateur n'est pas en train de jouer.";
+      break;
+      case 401:
+        lerreurSpectate.innerHTML = "Requête non autorisée.";
+      break;
+      case 403:
+        lerreurSpectate.innerHTML = "Requête interdite.";
+      break;
+      case 405:
+        lerreurSpectate.innerHTML = "Méthode non autorisée.";
+      break;
+      case 415:
+        lerreurSpectate.innerHTML = "Média non supporté.";
+      break;
+      case 429:
+        lerreurSpectate.innerHTML = "Trop de requêtes.";
+      break;
+      case 500:
+        lerreurSpectate.innerHTML = "Internal Server Error.";
+      break;
+      case 502:
+        lerreurSpectate.innerHTML = "Bad Gateway.";
+      break;
+      case 503:
+        lerreurSpectate.innerHTML = "Service non disponible.";
+      break;
+      case 504:
+        lerreurSpectate.innerHTML = "Gateway Timeout.";
+      break;
+    }
     return false;
   }
 }
