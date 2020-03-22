@@ -43,6 +43,7 @@
 }
 
 ul.menuBar {
+  padding-left: 28%;
 	background: #42454D;
 	list-style: none;
 	/* contain the list items */
@@ -56,7 +57,11 @@ ul.menuBar {
 }
 
 ul.menuBar li {
+<<<<<<< HEAD
     padding-left: 10%;
+=======
+  padding-left: 10%;
+>>>>>>> f27ce1803b2276c870c63a00660fa7bb75b3a9b4
 	float: left;
 	display: inline-block;
 }
