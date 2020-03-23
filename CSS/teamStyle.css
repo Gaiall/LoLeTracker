@@ -55,7 +55,15 @@
 }
 
 .itemsColumn{
-  width: 100px;
+  width: 165px;
+}
+
+.kdaColumn{
+    width: 1%;
+}
+
+.minionsColumn{
+    width: 1%;
 }
 
 .teamChampionPic{
@@ -68,6 +76,11 @@
 }
 
 .SummonerSpell{
+  height: 40px;
+  width: auto;
+}
+
+.items{
   height: 40px;
   width: auto;
 }

@@ -55,12 +55,32 @@ function displayHistory(){
               srcSpell2 = "img/SpellPlaceholder";
           }
           res += '<td><img src="'+srcSpell1+'.png" class="SummonerSpell"><img src="'+srcSpell2+'.png" class="SummonerSpell"></td>'
-          /*OBJETS TODO*/
-          /*console.log(data.participants[i].gameCustomizationObjects);
-          for(let j = 0; j < data.participants[i].gameCustomizationObjects.length; j++){
-              console.log(data.participants[i].gameCustomizationObjects[j]);
-              res += '<td><img src="DATA/10.5.1/img/items/'+"1055"+'".png class="items">'
-          }*/
+          /*Objets*/
+          res += '<td>';
+          if(data.participants[i].stats.item0 != 0){
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item0+'.png" class="items">';
+          }
+          if(data.participants[i].stats.item1 != 0){
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item1+'.png" class="items">';
+          }
+          if(data.participants[i].stats.item2 != 0){
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item2+'.png" class="items">';
+          }
+          if(data.participants[i].stats.item3 != 0){
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item3+'.png" class="items">';
+          }
+          if(data.participants[i].stats.item4 != 0){
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item4+'.png" class="items">';
+          }
+          if(data.participants[i].stats.item5 != 0){
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item5+'.png" class="items">';
+          }
+          if(data.participants[i].stats.item6 != 0){
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item6+'.png" class="items">';
+          }
+          res +="</td>";
+          /*Minions*/
+          res+='<td>'+data.participants[i].stats.totalMinionsKilled+'</td>'
           document.getElementById(id).innerHTML=res;
         }
         tableauHistory.style.visibility="visible";

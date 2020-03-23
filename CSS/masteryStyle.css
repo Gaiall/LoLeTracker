@@ -36,6 +36,12 @@
     margin-right:auto;
 }
 
+.allMastery td{
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
 .bestMastery, .bestMastery tr, .bestMastery td{
     margin-left:auto;
     margin-right:auto;
