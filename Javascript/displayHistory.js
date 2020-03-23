@@ -39,7 +39,7 @@ function displayHistory(){
           let srcSpell1 = "DATA/10.5.1/img/spell/"+idToSummonerSpell(data.participants[i].spell1Id);
           let srcSpell2 = "DATA/10.5.1/img/spell/"+idToSummonerSpell(data.participants[i].spell2Id);
           /*Champion*/
-          res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic">'+chIdToName(data.participants[i].championId)+'</td>';
+          res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic" alt="'+chIdToName(data.participants[i].championId)+'">'+chIdToName(data.participants[i].championId)+'</td>';
           /*Nom*/
           if(data.participants[i].spell1Id == 0){
               bot = "Bot ";
@@ -48,35 +48,35 @@ function displayHistory(){
           /*KDA*/
           res += '<td>'+data.participants[i].stats.kills+"/"+data.participants[i].stats.deaths+"/"+data.participants[i].stats.assists+'</td>';
           /*Runes TODO*/
-          res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].stats.perk1)+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].stats.perkSubStyle)+'.png" class="runes"></td>';
+          res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].stats.perk1)+'.png" class="runes" alt="'+mainRuneIdToName(data.participants[i].stats.perk1)+'"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].stats.perkSubStyle)+'.png" class="runes" alt="'+runeIdToName(data.participants[i].stats.perkSubStyle)+'"></td>';
           /*Summoner Spells*/
           if(data.participants[i].spell1Id == 0){
               srcSpell1 = "img/SpellPlaceholder";
               srcSpell2 = "img/SpellPlaceholder";
           }
-          res += '<td><img src="'+srcSpell1+'.png" class="SummonerSpell"><img src="'+srcSpell2+'.png" class="SummonerSpell"></td>'
+          res += '<td><img src="'+srcSpell1+'.png" class="SummonerSpell" alt="'+idToSummonerSpell(data.participants[i].spell1Id)+'"><img src="'+srcSpell2+'.png" class="SummonerSpell" alt="'+idToSummonerSpell(data.participants[i].spell2Id)+'"></td>'
           /*Objets*/
           res += '<td>';
           if(data.participants[i].stats.item0 != 0){
-              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item0+'.png" class="items">';
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item0+'.png" class="items" alt="item">';
           }
           if(data.participants[i].stats.item1 != 0){
-              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item1+'.png" class="items">';
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item1+'.png" class="items" alt="item">';
           }
           if(data.participants[i].stats.item2 != 0){
-              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item2+'.png" class="items">';
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item2+'.png" class="items" alt="item">';
           }
           if(data.participants[i].stats.item3 != 0){
-              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item3+'.png" class="items">';
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item3+'.png" class="items" alt="item">';
           }
           if(data.participants[i].stats.item4 != 0){
-              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item4+'.png" class="items">';
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item4+'.png" class="items" alt="item">';
           }
           if(data.participants[i].stats.item5 != 0){
-              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item5+'.png" class="items">';
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item5+'.png" class="items" alt="item">';
           }
           if(data.participants[i].stats.item6 != 0){
-              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item6+'.png" class="items">';
+              res += '<img src="DATA/10.5.1/img/item/'+data.participants[i].stats.item6+'.png" class="items" alt="item">';
           }
           res +="</td>";
           /*Minions*/
