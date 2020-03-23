@@ -29,19 +29,13 @@ function displaySpectators(){
       }
       res = "";
       /*Champion*/
-      res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" class="teamChampionPic">'+chIdToName(data.participants[i].championId)+'</td>';
+      res += '<td><img src="DATA/10.5.1/img/champion/'+chIdToName(data.participants[i].championId)+'.png" alt="'+chIdToName(data.participants[i].championId)+'" class="teamChampionPic">'+chIdToName(data.participants[i].championId)+'</td>';
       /*Nom*/
       res += '<td>'+data.participants[i].summonerName+'</td>';
       /*Runes TODO*/
-      res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].perks.perkIds[0])+'.png" class="runes"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].perks.perkSubStyle)+'.png" class="runes"></td>';
+      res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].stats.perk1)+'.png" class="runes" alt="'+mainRuneIdToName(data.participants[i].stats.perk1)+'"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].stats.perkSubStyle)+'.png" class="runes" alt="'+runeIdToName(data.participants[i].stats.perkSubStyle)+'"></td>';
       /*Summoner Spells*/
-      res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell"></td>'
-      /*OBJETS TODO*/
-      /*console.log(data.participants[i].gameCustomizationObjects);
-      for(let j = 0; j < data.participants[i].gameCustomizationObjects.length; j++){
-          console.log(data.participants[i].gameCustomizationObjects[j]);
-          res += '<td><img src="DATA/10.5.1/img/items/'+"1055"+'".png class="items">'
-      }*/
+      res += '<td><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell1Id)+'.png" class="SummonerSpell" alt="Summoner Spell"><img src="DATA/10.5.1/img/spell/'+idToSummonerSpell(data.participants[i].spell2Id)+'.png" class="SummonerSpell" alt="Summoner Spell"></td>'
       document.getElementById(id).innerHTML=res;
     }
     tableEquipes.style.visibility="visible";
