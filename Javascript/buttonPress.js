@@ -6,6 +6,16 @@ document.getElementById("summonerNameContainer").addEventListener('keypress', fu
 });
 
 document.getElementById("boutonSearch").onclick = function(){
+    let lesBouttons = document.getElementsByClassName("tablinks");
+    for (let i = 0; i < lesBouttons.length; i++) {
+        let elem = lesBouttons[i];
+        elem.disabled = true;
+        elem.classList.remove("active");
+    }
+    let tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
     document.getElementById("Chargement").style.visibility = "visible";
     let gotName = getSummonerIDbyName();
     let gotIcon = getSummonerIcon();
@@ -21,6 +31,7 @@ document.getElementById("boutonSearch").onclick = function(){
         }
         //Les fonctions a appeler une fois qu'on a récupéré le nom et l'icone du summoner
         let gotId = getSummonerIDbyName();
+<<<<<<< HEAD
         displayMastery();
     } else { //Si non, on annule tout
         let lesBouttons = document.getElementsByClassName("tablinks");
@@ -33,6 +44,9 @@ document.getElementById("boutonSearch").onclick = function(){
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
+=======
+        getSummonerMastery();
+>>>>>>> 0d8c8cce613ab0aaa7c569fdc6e0b03742a2f3d3
     }
     document.getElementById("Chargement").style.visibility = "hidden";
 }
