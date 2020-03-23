@@ -120,7 +120,7 @@ function displayMastery(){
                 if(data[i].championPointsUntilNextLevel == 0){
                     newTdXp = "<td>";
                     for(let tk = 1 ; tk <= data[i].tokensEarned ; tk++){
-                        newTdXp += '<img src="img/tokenGranted.png">';
+                        newTdXp += '<img src="img/tokenGranted.png" class="chestPic">';
                     }
                     let necessaryToken = 3;
                     if(data[i].championLevel == 5){
@@ -128,7 +128,7 @@ function displayMastery(){
                     }
                     console.log(necessaryToken);
                     for(let tkN = 1; tkN <= necessaryToken - data[i].tokensEarned;tkN++){
-                        newTdXp += '<img src="img/tokenNotGranted.png">';
+                        newTdXp += '<img src="img/tokenNotGranted.png" class="chestPic">';
                     }
                     newTdXp += "</td>";
                 }
