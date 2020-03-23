@@ -17,6 +17,7 @@ document.getElementById("boutonSearch").onclick = function(){
       tabcontent[i].style.display = "none";
     }
     document.getElementById("Chargement").style.visibility = "visible";
+    let gotAccount = getAccountIdbyName();
     let gotName = getSummonerIDbyName();
     let gotIcon = getSummonerIcon();
     if(gotName && gotIcon){
