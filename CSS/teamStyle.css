@@ -22,6 +22,11 @@
   color: white;
 }
 
+.blueTeam td, .redTeam td{
+    border-left: none;
+    border-right: none;
+}
+
 .blueTeam tr:nth-child(odd) {
   background-color: #000088;
 }
