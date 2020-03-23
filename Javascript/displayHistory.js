@@ -1,4 +1,4 @@
-function displaySpectators(){
+function displayHistory(){
   var data;
   var request = new XMLHttpRequest();
   request.open("GET","https://euw1.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/"+summonerId+"?api_key="+apiKey,false);
@@ -10,18 +10,18 @@ function displaySpectators(){
   let nbRed = 0;
   let id = "";
   let res = "";
-  let errorDiv = document.getElementById("playerNotPlayingError");
-  let tableauSpectate = document.getElementById("tableEquipes");
+  let errorDiv = document.getElementById("playerNeverPlayedError");
+  let tableauHistory = document.getElementById("tableEquipesHistory");
   if(request.status==200){
     for(let i = 0; i < data.participants.length; i++){
       switch(data.participants[i].teamId){
         case 100:
         nbBlue += 1;
-        id="blue"+nbBlue+"ChampRaw";
+        id="blue"+nbBlue+"ChampHistoryRaw";
         break;
         case 200:
         nbRed += 1;
-        id="red"+nbRed+"ChampRaw";
+        id="red"+nbRed+"ChampHistoryRaw";
         break;
         default:
         return false;
@@ -44,17 +44,17 @@ function displaySpectators(){
       }*/
       document.getElementById(id).innerHTML=res;
     }
-    tableEquipes.style.visibility="visible";
+    tableauHistory.style.visibility="visible";
     errorDiv.style.visibility="hidden";
     return true;
   }else{
-    tableEquipes.style.visibility="hidden";
+    tableauHistory.style.visibility="hidden";
     switch(request.status){
       case 400:
         errorDiv.innerHTML = "Bad Request.";
       break;
       case 404:
-        errorDiv.innerHTML = "This user is not currently playing.";
+        errorDiv.innerHTML = "This user never played.";
       break;
       case 401:
         errorDiv.innerHTML = "Unauthorised Request.";
