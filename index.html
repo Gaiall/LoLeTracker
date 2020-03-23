@@ -117,6 +117,16 @@
                             <li><button disabled="disabled" class="tablinks" onclick="openTab(event, 'History')">History</button></li>
                             <li><button disabled="disabled" class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button></li>
                         </ul>
+                        <!--
+                            Script pour palier au probleme d'activation des boutons a cause du localStorage
+                        -->
+                        <script>
+                            let lesBouttons = document.getElementsByClassName("tablinks");
+                            for (let i = 0; i < lesBouttons.length; i++) {
+                                let elem = lesBouttons[i];
+                                elem.disabled = true;
+                            }
+                        </script>
 
                         <div id="Mastery" class="tabcontent">
                             <div class="masteries contentCentered">
