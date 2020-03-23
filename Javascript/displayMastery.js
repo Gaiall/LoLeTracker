@@ -82,6 +82,7 @@ function displayMastery(){
                     championImage = casParticulier(championName, championImage);
                     let baliseImage = document.createElement('img');
                     baliseImage.src = championImage;
+                    baliseImage.alt = championName;
                     newTdChampionPic.appendChild(baliseImage);
                 newTr.appendChild(newTdChampionPic);
                 /*Le nom et Titre*/
@@ -102,6 +103,7 @@ function displayMastery(){
                     let imageMaitrise = document.createElement('img');
                     imageMaitrise.src = "img/mastery"+data[i].championLevel+".png"
                     imageMaitrise.classList.add("masteryLevelPic");
+                    imageMaitrise.alt = "Maîtrise du champion"
                     newTdMasteryLevel.appendChild(leTexte);
                     newTdMasteryLevel.appendChild(imageMaitrise);
                 newTr.appendChild(newTdMasteryLevel);
@@ -120,7 +122,7 @@ function displayMastery(){
                 if(data[i].championPointsUntilNextLevel == 0){
                     newTdXp = "<td>";
                     for(let tk = 1 ; tk <= data[i].tokensEarned ; tk++){
-                        newTdXp += '<img src="img/tokenGranted.png" class="chestPic">';
+                        newTdXp += '<img src="img/tokenGranted.png" class="chestPic" alt="Token Obtained">';
                     }
                     let necessaryToken = 3;
                     if(data[i].championLevel == 5){
@@ -128,7 +130,7 @@ function displayMastery(){
                     }
                     console.log(necessaryToken);
                     for(let tkN = 1; tkN <= necessaryToken - data[i].tokensEarned;tkN++){
-                        newTdXp += '<img src="img/tokenNotGranted.png" class="chestPic">';
+                        newTdXp += '<img src="img/tokenNotGranted.png" class="chestPic" alt="Token not Obtained">';
                     }
                     newTdXp += "</td>";
                 }
@@ -146,6 +148,7 @@ function displayMastery(){
                     let imgChest = document.createElement('img');
                     imgChest.src = chestUrl;
                     imgChest.classList.add("chestPic");
+                    imgChest.alt = "Coffre"
                     newTdChest.appendChild(imgChest);
                 newTr.appendChild(newTdChest);
                 tableau.appendChild(newTr);
