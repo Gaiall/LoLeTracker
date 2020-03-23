@@ -8,7 +8,7 @@ request.onload=function(){
     link +=chIdToName(data.freeChampionIds[i]);
     link +='.png';
     id = i.toString() + "rcP";
-    document.getElementById(id).innerHTML='<img src="'+link+'" class="rotationChampionPic"/>';
+    document.getElementById(id).innerHTML='<img src="'+link+'" class="rotationChampionPic" atl="'+chIdToName(data.freeChampionIds[i]+'">';
   }
 };
 request.send();
