@@ -117,10 +117,25 @@ function displayMastery(){
                 /*(grosse merde)*/
                 let xpNeeded = data[i].championPointsSinceLastLevel + data[i].championPointsUntilNextLevel;
                 let newTdXp = '<td>'+data[i].championPointsSinceLastLevel+'  <progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'"></progress>  '+xpNeeded+'</td>';
-                if(data[i].championPointsSinceLastLevel == xpNeeded)
-                    newTdXp = "<td><p>No XP needed</p></td>";
-                if(data[i].championLevel == 7)
+                if(data[i].championPointsUntilNextLevel == 0){
+                    newTdXp = "<td>";
+                    for(let tk = 1 ; tk <= data[i].tokensEarned ; tk++){
+                        newTdXp += '<img src="img/tokenGranted.png">';
+                    }
+                    let necessaryToken = 3;
+                    if(data[i].championLevel == 5){
+                        necessaryToken = 2;
+                    }
+                    console.log(necessaryToken);
+                    for(let tkN = 1; tkN <= necessaryToken - data[i].tokensEarned;tkN++){
+                        newTdXp += '<img src="img/tokenNotGranted.png">';
+                    }
+                    newTdXp += "</td>";
+                }
+
+                if(data[i].championLevel == 7){
                     newTdXp = "<td><p>Level Max reached !</p></td>";
+                }
                 newTr.innerHTML += newTdXp;
                 /*Le coffre*/
                 let newTdChest = document.createElement('td');
