@@ -15,6 +15,13 @@ function displayHistory(){
         data = JSON.parse(this.response);
       }
       request.send();
+      /*let blueWinner = document.getElementById("blueWon");
+      let redWinner = document.getElementById("redWon");
+      if(data.teams[0].win){
+          redWinner.innerHTML='<img src="img/win.png">';
+      }else{
+          blueWinner.innerHTML='<img src="img/win.png">';
+      }*/
       let nbBlue = 0;
       let nbRed = 0;
       let id = "";
