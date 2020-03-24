@@ -128,7 +128,7 @@ function displayMastery(){
                     if(data[i].championLevel == 5){
                         necessaryToken = 2;
                     }
-                    console.log(necessaryToken);
+                    //console.log(necessaryToken);
                     for(let tkN = 1; tkN <= necessaryToken - data[i].tokensEarned;tkN++){
                         newTdXp += '<img src="img/tokenNotGranted.png" class="chestPic" alt="Token not Obtained">';
                     }

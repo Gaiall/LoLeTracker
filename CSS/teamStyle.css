@@ -43,6 +43,20 @@
   background-color: #aa0000;
 }
 
+#blueWon, #redWon{
+    width:50px;
+}
+
+#blueAchivementRaw th, tr, td{
+    background-color: none;
+    border: none;
+}
+
+#redAchivementRaw th, tr, td{
+    background-color: none;
+    border: none;
+}
+
 .championColumn{
   width: 80px;
 }
@@ -93,4 +107,45 @@
 .runes{
   height: 40px;
   width: auto;
+}
+
+.crownPic{
+    width: 100%;
+    height: auto;
+}
+
+.nashorPic{
+    border-radius: 50%;
+    width: auto;
+    height: 100%;
+}
+
+.heraldPic{
+    border-radius: 50%;
+    width: auto;
+    height: 100%;
+}
+
+.inhibPic{
+    border-radius: 50%;
+    width: auto;
+    height: 100%;
+}
+
+.towerPic{
+    border-radius: 50%;
+    width: auto;
+    height: 100%;
+}
+
+.killPic{
+    border-radius: 50%;
+    width: auto;
+    height: 100%;
+}
+
+.drakePic{
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
 }

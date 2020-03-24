@@ -15,13 +15,140 @@ function displayHistory(){
         data = JSON.parse(this.response);
       }
       request.send();
-      /*let blueWinner = document.getElementById("blueWon");
+      let blueTeam = data.teams[0].teamId == 100 ? 0 : 1;
+      let redTeam = data.teams[0].teamId == 200 ? 0 : 1;
+
+      let blueWinner = document.getElementById("blueWon");
       let redWinner = document.getElementById("redWon");
-      if(data.teams[0].win){
-          redWinner.innerHTML='<img src="img/win.png">';
-      }else{
-          blueWinner.innerHTML='<img src="img/win.png">';
-      }*/
+
+      let redNash = document.getElementById("redNashor");
+      let blueNash = document.getElementById("blueNashor");
+
+      let redDragon = document.getElementById("redDragon");
+      let blueDragon = document.getElementById("blueDragon");
+
+      let redHeraut = document.getElementById("redHerald");
+      let blueHeraut = document.getElementById("blueHerald");
+
+      let redTour = document.getElementById("redTower");
+      let blueTour = document.getElementById("blueTower");
+
+      let redInhibitor = document.getElementById("redInhib");
+      let blueInhibitor = document.getElementById("blueInhib");
+
+      let redSang = document.getElementById("redKill");
+      let blueSang = document.getElementById("blueKill");
+      /*Win*/
+      {
+          if(data.teams[blueTeam].win=="Win"){
+              blueWinner.innerHTML='<img src="img/win.png" class="crownPic" alt="Win">';
+              redWinner.innerHTML='<img src="img/lose.png" class="crownPic" alt="Loss">';
+          }else{
+              redWinner.innerHTML='<img src="img/win.png" class="crownPic" alt="Win">';
+              blueWinner.innerHTML='<img src="img/lose.png" class="crownPic" alt="Loss">';
+          }
+      }
+      /*Nashor*/
+      {
+          if(data.teams[redTeam].firstBaron){
+              redNash.innerHTML='<img src="img/nashor.png" class="nashorPic" alt="Nashor Win">';
+              blueNash.innerHTML='<img src="img/noNashor.png" class="nashorPic" alt="Nashor Loss">';
+          }else if(data.teams[blueTeam].firstBaron){
+              blueNash.innerHTML='<img src="img/nashor.png" class="nashorPic" alt="Nashor Win">';
+              redNash.innerHTML='<img src="img/noNashor.png" class="nashorPic" alt="Nashor Loss">';
+          }else{
+              blueNash.innerHTML='<img src="img/noNashor.png" class="nashorPic" alt="Nashor Loss">';
+              redNash.innerHTML='<img src="img/noNashor.png" class="nashorPic" alt="Nashor Loss">';
+          }
+      }
+      blueNash.innerHTML += data.teams[blueTeam].baronKills;
+      redNash.innerHTML += data.teams[redTeam].baronKills;
+      /*Drake*/
+      {
+          if(data.teams[redTeam].firstDragon){
+              redDragon.innerHTML='<img src="img/drake.png" class="drakePic" alt="drake Win">';
+              blueDragon.innerHTML='<img src="img/noDrake.png" class="drakePic" alt="drake Loss">';
+          }else if(data.teams[blueTeam].firstDragon){
+              blueDragon.innerHTML='<img src="img/drake.png" class="drakePic" alt="drake Win">';
+              redDragon.innerHTML='<img src="img/noDrake.png" class="drakePic" alt="drake Loss">';
+          }else{
+              blueDragon.innerHTML='<img src="img/noDrake.png" class="drakePic" alt="drake Loss">';
+              redDragon.innerHTML='<img src="img/noDrake.png" class="drakePic" alt="drake Loss">';
+          }
+      }
+      blueDragon.innerHTML += data.teams[blueTeam].dragonKills;
+      redDragon.innerHTML += data.teams[redTeam].dragonKills;
+      /*Herald*/
+      {
+          if(data.teams[redTeam].firstRiftHerald){
+              redHeraut.innerHTML='<img src="img/herald.png" class="heraldPic" alt="herald Win">';
+              blueHeraut.innerHTML='<img src="img/noHerald.png" class="heraldPic" alt="herald Loss">';
+          }else if(data.teams[blueTeam].firstRiftHerald){
+              blueHeraut.innerHTML='<img src="img/herald.png" class="heraldPic" alt="herald Win">';
+              redHeraut.innerHTML='<img src="img/noHerald.png" class="heraldPic" alt="herald Loss">';
+          }else{
+              blueHeraut.innerHTML='<img src="img/noHerald.png" class="heraldPic" alt="herald Loss">';
+              redHeraut.innerHTML='<img src="img/noHerald.png" class="heraldPic" alt="herald Loss">';
+          }
+      }
+      blueHeraut.innerHTML += data.teams[blueTeam].riftHeraldKills;
+      redHeraut.innerHTML += data.teams[redTeam].riftHeraldKills;
+      /*Inhib*/
+      {
+          if(data.teams[redTeam].firstInhibitor){
+              redInhibitor.innerHTML='<img src="img/blueInhib.png" class="inhibPic" alt="inhib Win">';
+              blueInhibitor.innerHTML='<img src="img/noInhib.png" class="inhibPic" alt="inhib Loss">';
+          }else if(data.teams[blueTeam].firstInhibitor){
+              blueInhibitor.innerHTML='<img src="img/redInhib.png" class="inhibPic" alt="inhib Win">';
+              redInhibitor.innerHTML='<img src="img/noInhib.png" class="inhibPic" alt="inhib Loss">';
+          }else{
+              blueInhibitor.innerHTML='<img src="img/noInhib.png" class="inhibPic" alt="inhib Loss">';
+              redInhibitor.innerHTML='<img src="img/noInhib.png" class="inhibPic" alt="inhib Loss">';
+          }
+      }
+      blueInhibitor.innerHTML += data.teams[blueTeam].inhibitorKills;
+      redInhibitor.innerHTML += data.teams[redTeam].inhibitorKills;
+      /*Tour*/
+      {
+          if(data.teams[redTeam].firstTower){
+              redTour.innerHTML='<img src="img/blueTower.png" class="towerPic" alt="tower Win">';
+              blueTour.innerHTML='<img src="img/noTower.png" class="towerPic" alt="tower Loss">';
+          }else if(data.teams[blueTeam].firstTower){
+              blueTour.innerHTML='<img src="img/redTower.png" class="towerPic" alt="tower Win">';
+              redTour.innerHTML='<img src="img/noTower.png" class="towerPic" alt="tower Loss">';
+          }else{
+              blueTour.innerHTML='<img src="img/noTower.png" class="towerPic" alt="tower Loss">';
+              redTour.innerHTML='<img src="img/noTower.png" class="towerPic" alt="tower Loss">';
+          }
+      }
+      blueTour.innerHTML += data.teams[blueTeam].towerKills;
+      redTour.innerHTML += data.teams[redTeam].towerKills;
+      /*Kill*/
+      {
+          if(data.teams[blueTeam].firstBlood){
+              redSang.innerHTML='<img src="img/kill.png" class="killPic" alt="kill Win">';
+              blueSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
+          }else if(data.teams[redTeam].firstBlood){
+              blueSang.innerHTML='<img src="img/kill.png" class="killPic" alt="kill Win">';
+              redSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
+          }else{
+              blueSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
+              redSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
+          }
+      }
+      let redKills = 0;
+      let blueKills = 0;
+      for(let i = 0; i < data.participants.length; i++){
+          if(data.participants[i].teamId == 100){
+              blueKills += data.participants[i].stats.kills;
+          }else{
+              redKills += data.participants[i].stats.kills;
+          }
+      }
+      blueSang.innerHTML += blueKills;
+      redSang.innerHTML += redKills;
+
+
       let nbBlue = 0;
       let nbRed = 0;
       let id = "";
