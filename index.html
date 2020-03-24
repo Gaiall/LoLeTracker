@@ -113,7 +113,8 @@
                     <script src="Javascript/buttonPress.js"></script>
                     <div>
                         <ul class="menuBar">
-                            <li><button disabled="disabled" class="tablinks" onclick="openTab(event, 'Mastery')" id="defaultOpen">Mastery</button></li>
+                            <li><button disabled="disabled" class="tablinks" onclick="openTab(event, 'Summoner')" id="defaultOpen">Summoner</button></li>
+                            <li><button disabled="disabled" class="tablinks" onclick="openTab(event, 'Mastery')">Mastery</button></li>
                             <li><button disabled="disabled" class="tablinks" onclick="openTab(event, 'History')">History</button></li>
                             <li><button disabled="disabled" class="tablinks" onclick="openTab(event, 'Spectate')">Spectate</button></li>
                         </ul>
@@ -127,6 +128,9 @@
                                 elem.disabled = true;
                             }
                         </script>
+
+                        <div id="Summoner" class="tabcontent">
+                        </div>
 
                         <div id="Mastery" class="tabcontent">
                             <div class="masteries contentCentered">

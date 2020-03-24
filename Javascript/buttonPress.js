@@ -47,4 +47,5 @@ document.getElementById("boutonSearch").onclick = function(){
       }
     }
     document.getElementById("Chargement").style.visibility = "hidden";
+    document.getElementById("defaultOpen").click();
 }

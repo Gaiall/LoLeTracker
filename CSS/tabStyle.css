@@ -43,7 +43,6 @@
 }
 
 ul.menuBar {
-  padding-left: 28%;
 	background: #42454D;
 	list-style: none;
 	/* contain the list items */
@@ -53,7 +52,7 @@ ul.menuBar {
 	display: table;*/ /* ul.menuBar will behave like a table now */
 
 	text-align: center;
-    padding-left: 28%;
+    padding-left: 8%;
 }
 
 ul.menuBar li {
