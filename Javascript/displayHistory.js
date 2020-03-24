@@ -125,10 +125,10 @@ function displayHistory(){
       redTour.innerHTML += data.teams[redTeam].towerKills;
       /*Kill*/
       {
-          if(data.teams[blueTeam].firstBlood){
+          if(data.teams[redTeam].firstBlood){
               redSang.innerHTML='<img src="img/kill.png" class="killPic" alt="kill Win">';
               blueSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
-          }else if(data.teams[redTeam].firstBlood){
+          }else if(data.teams[blueTeam].firstBlood){
               blueSang.innerHTML='<img src="img/kill.png" class="killPic" alt="kill Win">';
               redSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
           }else{
