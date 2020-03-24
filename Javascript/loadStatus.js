@@ -1,5 +1,5 @@
 var request = new XMLHttpRequest();
-request.open("GET","https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key="+apiKey,false);
+request.open("GET",status_v3+"?api_key="+apiKey,false);
 request.onload=function(){
   var data = JSON.parse(this.response);
   /*Permet d'afficher le status des serveurs avec la première lettre en majuscule*/

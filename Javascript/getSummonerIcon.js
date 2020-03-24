@@ -1,6 +1,6 @@
 function getSummonerIcon(){
     var request = new XMLHttpRequest();
-    request.open("GET","https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/"+summonerName+"?api_key="+apiKey,false);
+    request.open("GET",summoner_v4+summonerName+"?api_key="+apiKey,false);
     request.onload=function(){
         var data = JSON.parse(this.response);
         if(this.status == 200){

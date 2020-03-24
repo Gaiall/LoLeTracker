@@ -17,7 +17,7 @@ function casParticulier(championName, championImage){
 
 function displayMastery(){
     var request = new XMLHttpRequest();
-    request.open("GET","https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/"+summonerId+"?api_key="+apiKey, false);
+    request.open("GET",champion_mastery_v4+summonerId+"?api_key="+apiKey, false);
     var data;
     request.onload = function(){
         data = JSON.parse(this.response);

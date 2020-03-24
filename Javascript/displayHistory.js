@@ -3,14 +3,14 @@ function displayHistory(){
   let errorDiv = document.getElementById("playerNeverPlayedError");
   let tableauHistory = document.getElementById("tableEquipesHistory");
   var request = new XMLHttpRequest();
-  request.open("GET","https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/"+accountId+"?api_key="+apiKey,false);
+  request.open("GET",match_v4_matchlist+accountId+"?api_key="+apiKey,false);
   request.onload=function(){
     matchlist = JSON.parse(this.response);
   }
   request.send();
   let i = 0;
   if(request.status==200){
-      request.open("GET","https://euw1.api.riotgames.com/lol/match/v4/matches/"+matchlist.matches[i].gameId+"?api_key="+apiKey,false);
+      request.open("GET",match_v4_matches+matchlist.matches[i].gameId+"?api_key="+apiKey,false);
       request.onload=function(){
         data = JSON.parse(this.response);
       }

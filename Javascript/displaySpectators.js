@@ -1,7 +1,7 @@
 function displaySpectators(){
   var data;
   var request = new XMLHttpRequest();
-  request.open("GET","https://euw1.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/"+summonerId+"?api_key="+apiKey,false);
+  request.open("GET",spectator_v4+summonerId+"?api_key="+apiKey,false);
   request.onload=function(){
     data = JSON.parse(this.response);
   }
