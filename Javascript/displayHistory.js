@@ -125,10 +125,10 @@ function displayHistory(){
       redTour.innerHTML += data.teams[redTeam].towerKills;
       /*Kill*/
       {
-          if(data.teams[blueTeam].firstBlood){
+          if(data.teams[redTeam].firstBlood){
               redSang.innerHTML='<img src="img/kill.png" class="killPic" alt="kill Win">';
               blueSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
-          }else if(data.teams[redTeam].firstBlood){
+          }else if(data.teams[blueTeam].firstBlood){
               blueSang.innerHTML='<img src="img/kill.png" class="killPic" alt="kill Win">';
               redSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
           }else{
@@ -182,7 +182,7 @@ function displayHistory(){
           /*KDA*/
           res += '<td>'+data.participants[i].stats.kills+"/"+data.participants[i].stats.deaths+"/"+data.participants[i].stats.assists+'</td>';
           /*Runes TODO*/
-          res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].stats.perk1)+'.png" class="runes" alt="'+mainRuneIdToName(data.participants[i].stats.perk1)+'"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].stats.perkSubStyle)+'.png" class="runes" alt="'+runeIdToName(data.participants[i].stats.perkSubStyle)+'"></td>';
+          res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].stats.perk0)+'.png" class="runes" alt="'+mainRuneIdToName(data.participants[i].stats.perk0)+'"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].stats.perkSubStyle)+'.png" class="runes" alt="'+runeIdToName(data.participants[i].stats.perkSubStyle)+'"></td>';
           /*Summoner Spells*/
           if(data.participants[i].spell1Id == 0){
               srcSpell1 = "img/SpellPlaceholder";
