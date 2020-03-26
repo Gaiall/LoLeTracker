@@ -2,7 +2,11 @@ function displayHistory(){
   var data;
   let errorDiv = document.getElementById("playerNeverPlayedError");
   let tableauHistory = document.getElementById("tableEquipesHistory");
-  let i = 0;
+  let i = document.getElementById("selectedMatch").value;
+  if(i == ""){
+      i = 0;
+  }
+
   if(request.status==200){
       request.open("GET",match_v4_matches+matchlist.matches[i].gameId+"?api_key="+apiKey,false);
       request.onload=function(){
