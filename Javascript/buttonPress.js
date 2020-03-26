@@ -32,6 +32,7 @@ document.getElementById("boutonSearch").onclick = function(){
         }
         //Les fonctions a appeler une fois qu'on a récupéré le nom et l'icone du summoner
         let gotId = getSummonerIDbyName();
+        getMatchlist();
         displayMastery();
         displayHistory();
     } else { //Si non, on annule tout
