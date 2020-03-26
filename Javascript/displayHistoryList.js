@@ -1,5 +1,4 @@
 function displayHistoryList(){
-    console.log("Execution du displayHistoryList");
     var laList = document.getElementById("gameNumberSelect");
     let res = "";
     res += '<select id="selectedMatch" onchange="displayHistory()">';

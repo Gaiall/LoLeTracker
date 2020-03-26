@@ -13,6 +13,8 @@ function displayHistory(){
         data = JSON.parse(this.response);
       }
       request.send();
+      let gm = document.getElementById("gameMode");
+      gm.innerHTML = '<p>'+data.gameMode+'</p>';
       let blueTeam = data.teams[0].teamId == 100 ? 0 : 1;
       let redTeam = data.teams[0].teamId == 200 ? 0 : 1;
 
