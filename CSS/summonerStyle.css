@@ -1,0 +1,17 @@
+.summonerTable, .summonerTable tr, .summonerTable td {
+    border: 1px solid #FFF;
+}
+
+.summonerTable #summonerIconHolder {
+    width: 20%;
+}
+
+.summonerPic {
+    width: 90%;
+    border-radius: 20%;
+}
+
+.summonerRank {
+    width: 20%;
+    border-radius: 20%;
+}
