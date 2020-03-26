@@ -17,7 +17,6 @@ document.getElementById("boutonSearch").onclick = function(){
       tabcontent[i].style.display = "none";
     }
     document.getElementById("Chargement").style.visibility = "visible";
-    let gotAccount = getAccountIdbyName();
     let gotName = getSummonerbyName();
     let gotIcon = getSummonerIcon();
     if(gotName && gotIcon){
@@ -33,6 +32,7 @@ document.getElementById("boutonSearch").onclick = function(){
         //Les fonctions a appeler une fois qu'on a récupéré le nom et l'icone du summoner
         let gotId = getSummonerbyName();
         getMatchlist();
+        displaySummoner();
         displayHistoryList();
         displayMastery();
         displayHistory();

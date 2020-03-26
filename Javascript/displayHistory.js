@@ -127,13 +127,13 @@ function displayHistory(){
       {
           if(data.teams[redTeam].firstBlood){
               redSang.innerHTML='<img src="img/kill.png" class="killPic" alt="kill Win">';
-              blueSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
+              blueSang.innerHTML='<img src="img/noKill.png" class="killPic" alt="kill Loss">';
           }else if(data.teams[blueTeam].firstBlood){
               blueSang.innerHTML='<img src="img/kill.png" class="killPic" alt="kill Win">';
-              redSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
+              redSang.innerHTML='<img src="img/noKill.png" class="killPic" alt="kill Loss">';
           }else{
-              blueSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
-              redSang.innerHTML='<img src="img/nokill.png" class="killPic" alt="kill Loss">';
+              blueSang.innerHTML='<img src="img/noKill.png" class="killPic" alt="kill Loss">';
+              redSang.innerHTML='<img src="img/noKill.png" class="killPic" alt="kill Loss">';
           }
       }
       let redKills = 0;
