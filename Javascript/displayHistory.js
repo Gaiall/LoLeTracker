@@ -2,9 +2,9 @@ function displayHistory(){
   var data;
   let errorDiv = document.getElementById("playerNeverPlayedError");
   let tableauHistory = document.getElementById("tableEquipesHistory");
-  let i = document.getElementById("selectedMatch").value;
-  if(i == ""){
-      i = 0;
+  let i = 0;
+  if(document.getElementById("selectedMatch").value != ""){
+      i = document.getElementById("selectedMatch").value -1;
   }
 
   if(request.status==200){
