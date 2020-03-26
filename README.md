@@ -10,6 +10,7 @@
     <li>Summoner-V4 : https://developer.riotgames.com/apis#summoner-v4</li>
     <li>Match-V4 : https://developer.riotgames.com/apis#match-v4</li>
     <li>Spectator-V4 : https://developer.riotgames.com/apis#spectator-v4</li>
+    <li>League-V4 : https://developer.riotgames.com/apis#league-v4</li>
   </ul>
   </div>
   <div>
