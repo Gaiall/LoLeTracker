@@ -12,11 +12,13 @@
     <link rel="stylesheet" type="text/css" href="CSS/teamStyle.css" title="Style">
     <link rel="stylesheet" type="text/css" href="CSS/masteryStyle.css" title="Style">
     <link rel="stylesheet" type="text/css" href="CSS/summonerStyle.css" title="Style">
+
     <script>
     var apiKey;
     var summonerName;
     var summonerId;
     var accountId;
+    var matchlist;
     var match_v4_matchlist = "https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/";
     var match_v4_matches = "https://euw1.api.riotgames.com/lol/match/v4/matches/";
     var champion_mastery_v4 = "https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/";
@@ -25,8 +27,10 @@
     var champion_v3 = "https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations";
     var status_v3 = "https://euw1.api.riotgames.com/lol/status/v3/shard-data";
     </script>
+
     <script src="Javascript/jquery.js"></script>
 
+    <script src="Javascript/getMatchlist.js"></script>
     <script src="Javascript/idToSummonerSpell.js"></script>
     <script src="Javascript/chIdToName.js"></script>
     <script src="Javascript/mainRuneIdToName.js"></script>
@@ -39,6 +43,7 @@
     <script src="Javascript/getChampionTitle.js"></script>
 
     <script src="Javascript/displayMastery.js"></script>
+    <script src="Javascript/displayHistoryList.js"></script>
     <script src="Javascript/displayHistory.js"></script>
     <script src="Javascript/displaySpectators.js"></script>
 
@@ -183,6 +188,8 @@
                         </div>
 
                         <div id="History" class="tabcontent">
+                            <div id="gameNumberSelect">
+                            </div>
                             <div>
                                 <p id="playerNeverPlayedError" class="error"></p>
                             </div>
