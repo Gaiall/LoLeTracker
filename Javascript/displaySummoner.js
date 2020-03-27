@@ -21,15 +21,17 @@ function displaySummoner(){
     document.getElementById("summonerRankFlex").innerHTML = "Unranked";
     request.onload = function(){
         var data = JSON.parse(this.response);
-        if(data[0].queueType == "RANKED_FLEX_SR"){
-            rankedFlex = data[0];
-        } else {
-            rankedSolo = data[0];
-        }
-        if(data.length > 1 && rankedFlex != null){
-            rankedSolo = data[1];
-        } else {
-            rankedFlex = data[1];
+        if(data.length > 0){
+            if(data[0].queueType == "RANKED_FLEX_SR"){
+                rankedFlex = data[0];
+            } else {
+                rankedSolo = data[0];
+            }
+            if(data.length > 1 && rankedFlex != null){
+                rankedSolo = data[1];
+            } else {
+                rankedFlex = data[1];
+            }
         }
     }
     request.send();
