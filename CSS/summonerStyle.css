@@ -19,3 +19,8 @@
     width: 100px;
     border-radius: 20%;
 }
+
+#last10Stats {
+    width: 100%;
+    border: thick double #32a1ce;
+}

@@ -51,4 +51,41 @@ function displaySummoner(){
         document.getElementById("summonerRankFlexImg").src = "img/Emblem_" + tier + ".png";
         document.getElementById("summonerRankFlex").innerHTML = tier + " " + rank + " " + points + "LP";
     }
+    let last10length = matchlist.matches.length < 10 ? matchlist.matches.length : 10;
+    var last10Matches = new Array();
+    for(let k = 0; k < last10length; k++){
+        request.open("GET",match_v4_matches+matchlist.matches[k].gameId+"?api_key="+apiKey,false);
+        request.onload=function(){
+          last10Matches[k] = JSON.parse(this.response);
+        }
+        request.send();
+    }
+    let kdaL10 = "";
+    let kL10 = 0;
+    let dL10 = 0;
+    let aL10 = 0;
+    let minionsL10 = 0;
+    let champLvL10 = 0;
+    let ccL10 = 0;
+    let playerID = 0;
+    for(let k = 0; k < last10length; k++){
+        for(let j = 0; j < 10; j++){
+            if(summonerName == last10Matches[k].participantIdentities[j].player.summonerName){
+                playerID = j;
+            }
+        }
+        let playerStats = last10Matches[k].participants[playerID].stats;
+        kL10+=playerStats.kills;
+        dL10+=playerStats.deaths;
+        aL10+=playerStats.assits;
+    }
+    let leKdaDesLastGames = document.getElementById(last10KDA);
+    let leMinionDesLastGames = document.getElementById(last10Minions);
+    let leChampLvlDesLastGames = document.getElementById(last10ChampLevel);
+    let leCcDesLastGames = document.getElementById(last10CrowdControl);
+    kL10 = Math.ceil(kL10/10);
+    dL10 = Math.ceil(dL10/10);
+    aL10 = Math.ceil(aL10/10);
+    kdaL10 = kL10+"/"+dL10+"/"+aL10;
+    leKdaDesLastGames.innerHTML=kdaL10;
 }
