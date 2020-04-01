@@ -7,6 +7,23 @@ function capitalize(s) {
     return s
 }
 
+function casParticulier2(championName, championImage){
+    switch(championName) {
+        case "LeBlanc":
+            championImage = "./DATA/10.5.1/img/champion/Leblanc.png"
+            break;
+        case "KhaZix":
+            championImage = "./DATA/10.5.1/img/champion/Khazix.png"
+            break;
+        case "Fiddlesticks":
+            championImage = "./DATA/10.5.1/img/champion/FiddleSticks.png"
+            break;
+        default:
+
+    }
+    return championImage;
+}
+
 function isIn(tab, argument) {
   let i;
   for(i = 0 ; i < tab.length;i++){
@@ -144,8 +161,11 @@ function displaySummoner(){
         }
     }
     let endroitDesChampions = document.getElementById("ChampionsUsed");
-    endroitDesChampions.innerHTML = "";
+    endroitDesChampions.innerHTML = "<br>";
     for(let i = 0; i < champsTreated.length; i++){
-        endroitDesChampions.innerHTML += '<div><img src="./DATA/10.5.1/img/champion/'+chIdToName(champsTreated[i])+'.png" alt="Champion">'+ champsTreatedRate[i]*10+"%</div>";
+        championName = chIdToName(champsTreated[i]);
+        championSrc = "./DATA/10.5.1/img/champion/"+championName+".png";
+        championSrc = casParticulier2(championName, championSrc);
+        endroitDesChampions.innerHTML += '<div><img src="' + championSrc + '" alt="Champion">' + champsTreatedRate[i]*10+"%</div>";
     }
 }

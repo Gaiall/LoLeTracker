@@ -5,8 +5,10 @@ request.onload=function(){
   /*Permet d'afficher le status des serveurs avec la première lettre en majuscule*/
   for(let i = 0; i < data.freeChampionIds.length;i++){
     let link ='./DATA/10.5.1/img/champion/';
-    link +=chIdToName(data.freeChampionIds[i]);
+    name = chIdToName(data.freeChampionIds[i]);
+    link += name;
     link +='.png';
+    link = casParticulier2(name, link);
     id = i.toString() + "rcP";
     document.getElementById(id).innerHTML='<img src="'+link+'" class="rotationChampionPic" atl="'+chIdToName(data.freeChampionIds[i])+'">';
   }
