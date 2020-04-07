@@ -5,7 +5,7 @@ request.onload=function(){
   /*Permet d'afficher le status des serveurs avec la première lettre en majuscule*/
   for(let i = 0; i < data.freeChampionIdsForNewPlayers.length;i++){
     let link ='./DATA/10.5.1/img/champion/';
-    name = chIdToName(data.freeChampionIds[i]);
+    name = chIdToName(data.freeChampionIdsForNewPlayers[i]);
     link += name;
     link +='.png';
     link = casParticulier2(name, link);
