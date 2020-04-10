@@ -68,5 +68,7 @@ function mainRuneIdToName(id){
     case 8473 : return "Resolve/BonePlating/BonePlating"; break;
     case 8451 : return "Resolve/Overgrowth/Overgrowth"; break;
     case 8453 : return "Resolve/Revitalize/Revitalize"; break;
+    /*Pas de rune*/
+    default: return "None ";
   }
 }

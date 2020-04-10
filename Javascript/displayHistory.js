@@ -181,7 +181,7 @@ function displayHistory(){
           res += '<td>'+bot + data.participantIdentities[i].player.summonerName+'</td>';
           /*KDA*/
           res += '<td>'+data.participants[i].stats.kills+"/"+data.participants[i].stats.deaths+"/"+data.participants[i].stats.assists+'</td>';
-          /*Runes TODO*/
+          /*Runes*/
           res += '<td><img src="DATA/img/perk-images/Styles/'+mainRuneIdToName(data.participants[i].stats.perk0)+'.png" class="runes" alt="'+mainRuneIdToName(data.participants[i].stats.perk0)+'"><img src="DATA/img/perk-images/Styles/'+runeIdToName(data.participants[i].stats.perkSubStyle)+'.png" class="runes" alt="'+runeIdToName(data.participants[i].stats.perkSubStyle)+'"></td>';
           /*Summoner Spells*/
           if(data.participants[i].spell1Id == 0){
