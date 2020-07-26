@@ -1,6 +1,6 @@
 function getChampionTitle(championName){
     var championTitle;
-    $.getJSON("DATA/10.5.1/data/en_GB/champion.json", function(json) {
+    $.getJSON("DATA/"+dataDragonVersion+"/data/en_GB/champion.json", function(json) {
         switch(championName){
             case "Aatrox" : championTitle =  json.data.Aatrox.title; break;
             case "Thresh" : championTitle =  json.data.Thresh.title; break;
@@ -150,6 +150,7 @@ function getChampionTitle(championName){
             case "Kayn" : championTitle =  json.data.Kayn.title; break;
             case "Rakan" : championTitle =  json.data.Rakan.title; break;
             case "Xayah" : championTitle =  json.data.Xayah.title; break;
+            case "Lillia" : championTitle =  json.data.Lillia.title; break;
         }
     });
     return championTitle;

@@ -4,7 +4,7 @@ function getSummonerIcon(){
     request.onload=function(){
         var data = JSON.parse(this.response);
         if(this.status == 200){
-            let link ='./DATA/10.5.1/img/profileicon/'+data.profileIconId+'.png';
+            let link ='./DATA/'+dataDragonVersion+'/img/profileicon/'+data.profileIconId+'.png';
             document.getElementById("summonerIcon").src = link;
             document.getElementById("summonerIcon").classList.add("rotationChampionPic");
             document.getElementById("summonerNameError").innerHTML = "";

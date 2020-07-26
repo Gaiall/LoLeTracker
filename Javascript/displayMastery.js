@@ -26,9 +26,9 @@ function displayMastery(){
     if(request.status == 200){
         var tableau = document.getElementById("allMastery");
         tableau.innerHTML = "";
-        document.getElementById("firstBest").src = "DATA/10.5.1/img/profileicon/29.png"
-        document.getElementById("secondBest").src = "DATA/10.5.1/img/profileicon/29.png"
-        document.getElementById("thirdBest").src = "DATA/10.5.1/img/profileicon/29.png"
+        document.getElementById("firstBest").src = "DATA/"+dataDragonVersion+"/img/profileicon/29.png"
+        document.getElementById("secondBest").src = "DATA/"+dataDragonVersion+"/img/profileicon/29.png"
+        document.getElementById("thirdBest").src = "DATA/"+dataDragonVersion+"/img/profileicon/29.png"
         if(data.length > 0){
             let headerTr = document.createElement('tr');
             let th1 = document.createElement('th');

@@ -10,13 +10,13 @@ function capitalize(s) {
 function casParticulier2(championName, championImage){
     switch(championName) {
         case "LeBlanc":
-            championImage = "./DATA/10.5.1/img/champion/Leblanc.png"
+            championImage = "./DATA/"+dataDragonVersion+"/img/champion/Leblanc.png"
             break;
         case "KhaZix":
-            championImage = "./DATA/10.5.1/img/champion/Khazix.png"
+            championImage = "./DATA/"+dataDragonVersion+"/img/champion/Khazix.png"
             break;
         case "Fiddlesticks":
-            championImage = "./DATA/10.5.1/img/champion/FiddleSticks.png"
+            championImage = "./DATA/"+dataDragonVersion+"/img/champion/FiddleSticks.png"
             break;
         default:
 
@@ -167,7 +167,7 @@ function displaySummoner(){
     endroitDesChampions.innerHTML = "<br>";
     for(let i = 0; i < champsTreated.length; i++){
         championName = chIdToName(champsTreated[i]);
-        championSrc = "./DATA/10.5.1/img/champion/"+championName+".png";
+        championSrc = "./DATA/"+dataDragonVersion+"/img/champion/"+championName+".png";
         championSrc = casParticulier2(championName, championSrc);
         endroitDesChampions.innerHTML += '<div><img src="' + championSrc + '" alt="Champion">' + champsTreatedRate[i]*10+"%</div>";
     }
