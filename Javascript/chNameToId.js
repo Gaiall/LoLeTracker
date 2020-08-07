@@ -149,6 +149,7 @@ function chNameToId(name){
     case "Rakan" : return 497; break;
     case "Xayah" : return 498; break;
     case "Lillia" : return 876; break;
+    case "Yone" : return 777; break;
     default : console.log("Champion Inconnu : " + name); break;
   }
 }
