@@ -30,6 +30,7 @@ function displayMastery(){
         document.getElementById("secondBest").src = "DATA/"+dataDragonVersion+"/img/profileicon/29.png"
         document.getElementById("thirdBest").src = "DATA/"+dataDragonVersion+"/img/profileicon/29.png"
         if(data.length > 0){
+            /*Champion par champion*/
             let headerTr = document.createElement('tr');
             let th1 = document.createElement('th');
                 th1.innerHTML = "Rank";
@@ -53,6 +54,10 @@ function displayMastery(){
                 th7.innerHTML = "Chest";
                 headerTr.appendChild(th7);
             tableau.appendChild(headerTr);
+            let masteryScore = 0;
+            let totalChampXP = 0;
+            let totalChestsGranted = 0;
+            let totalChestsUngranted = 0;
             for (var i = 0; i < data.length; i++) {
                 //On récupère les 3 premiers meilleurs champions
                 var championName = chIdToName(data[i].championId)
@@ -98,6 +103,7 @@ function displayMastery(){
                     newTdMasteryLevel.classList.add("masteryLevel");
                     leTexte = document.createElement('p');
                     leTexte.innerHTML = data[i].championLevel;
+                    masteryScore += data[i].championLevel;
                     leTexte.style.marginBottom = "0px";
                     leTexte.style.marginTop = "0px";
                     let imageMaitrise = document.createElement('img');
@@ -112,6 +118,7 @@ function displayMastery(){
                     newTdMasteryPoints.classList.add("masteryPoint");
                     leTexte = document.createElement('p');
                     leTexte.innerHTML = data[i].championPoints;
+                    totalChampXP += data[i].championPoints;
                     newTdMasteryPoints.appendChild(leTexte);
                 newTr.appendChild(newTdMasteryPoints);
                 /*La barre*/
@@ -128,7 +135,6 @@ function displayMastery(){
                     if(data[i].championLevel == 5){
                         necessaryToken = 2;
                     }
-                    //console.log(necessaryToken);
                     for(let tkN = 1; tkN <= necessaryToken - data[i].tokensEarned;tkN++){
                         newTdXp += '<img src="img/tokenNotGranted.png" class="chestPic" alt="Token not Obtained">';
                     }
@@ -143,7 +149,10 @@ function displayMastery(){
                 let newTdChest = document.createElement('td');
                     let chestUrl = "img/ChestNotGranted.png";
                     if(data[i].chestGranted){
+                        totalChestsGranted += 1;
                         chestUrl = "img/ChestGranted.png";
+                    }else{
+                        totalChestsUngranted += 1;
                     }
                     let imgChest = document.createElement('img');
                     imgChest.src = chestUrl;
@@ -153,6 +162,11 @@ function displayMastery(){
                 newTr.appendChild(newTdChest);
                 tableau.appendChild(newTr);
             }
+            /*Après avoir récupéré toutes les infos, on remplit les cases du tableau résumé*/
+            document.getElementById("numMasteryScore").innerHTML = masteryScore;
+            document.getElementById("numChampionXP").innerHTML = totalChampXP;
+            document.getElementById("numChestGranted").innerHTML = totalChestsGranted;
+            document.getElementById("numChestLeft").innerHTML = totalChestsUngranted;
         } else {
             let headerTr = document.createElement('tr');
             let th = document.createElement('th');

@@ -77,7 +77,7 @@ function displaySummoner(){
         document.getElementById("summonerRankFlex").innerHTML = tier + " " + rank + " " + points + "LP";
     }
     let last10length = matchlist.matches.length < 10 ? matchlist.matches.length : 10;
-    console.log("Matches : " + last10length)
+    //console.log("Matches : " + last10length)
     var last10Matches = new Array();
     for(let k = 0; k < last10length; k++){
         request.open("GET",match_v4_matches+matchlist.matches[k].gameId+"?api_key="+apiKey,false);
@@ -105,9 +105,9 @@ function displaySummoner(){
     let champsTreated = new Array();
     let champsTreatedRate = new Array();
     for(let k = 0; k < last10length; k++){
-        console.log("k - " + k);
+        //console.log("k - " + k);
         for(let j = 0; j < last10Matches[k].participantIdentities.length; j++){
-            console.log("j - " + j)
+            //console.log("j - " + j)
             if(summonerName == last10Matches[k].participantIdentities[j].player.summonerName){
                 playerID = j;
             }

@@ -30,6 +30,11 @@
     width: 30%;
 }
 
+#totalMasteries tr{
+    width:98%;
+    background-color: red;
+}
+
 .allMastery, .allMastery tr, .allMastery td{
     border: 2px solid #42454D;
     margin-left:auto;
