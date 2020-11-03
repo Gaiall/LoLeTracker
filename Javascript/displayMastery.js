@@ -163,10 +163,10 @@ function displayMastery(){
                 tableau.appendChild(newTr);
             }
             /*Après avoir récupéré toutes les infos, on remplit les cases du tableau résumé*/
-            document.getElementById("numMasteryScore").innerHTML = masteryScore;
+            /*document.getElementById("numMasteryScore").innerHTML = masteryScore;
             document.getElementById("numChampionXP").innerHTML = totalChampXP;
             document.getElementById("numChestGranted").innerHTML = totalChestsGranted;
-            document.getElementById("numChestLeft").innerHTML = totalChestsUngranted;
+            document.getElementById("numChestLeft").innerHTML = totalChestsUngranted;*/
         } else {
             let headerTr = document.createElement('tr');
             let th = document.createElement('th');
