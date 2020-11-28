@@ -151,6 +151,7 @@ function chNameToId(name){
     case "Lillia" : return 876; break;
     case "Yone" : return 777; break;
     case "Seraphine" : return 147; break;
+    case "Samira" : return 360; break;
     default : console.log("Champion Inconnu : " + name); break;
   }
 }
