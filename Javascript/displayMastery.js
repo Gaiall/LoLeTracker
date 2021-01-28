@@ -125,7 +125,11 @@ function displayMastery(){
                 /*On garde le code qui pue de David parce que je sais pas aligner des élements correctement avec le css*/
                 /*(grosse merde)*/
                 let xpNeeded = data[i].championPointsSinceLastLevel + data[i].championPointsUntilNextLevel;
-                let newTdXp = '<td>'+data[i].championPointsSinceLastLevel+'  <progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'"></progress>  '+xpNeeded+'</td>';
+                let coloris = "blue";
+                if(data[i].championLevel == 1) coloris = "red";
+                if(data[i].championLevel == 2) coloris = "green";
+                if(data[i].championLevel == 3) coloris = "yellow";
+                let newTdXp = '<td>'+data[i].championPointsSinceLastLevel+'  <progress max="'+xpNeeded+'" value="'+data[i].championPointsSinceLastLevel+'" background-color="'+coloris+'"></progress>  '+xpNeeded+'</td>';
                 if(data[i].championPointsUntilNextLevel == 0){
                     newTdXp = "<td>";
                     for(let tk = 1 ; tk <= data[i].tokensEarned ; tk++){

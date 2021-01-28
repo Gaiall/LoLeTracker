@@ -153,6 +153,7 @@ function chIdToName(id){
     case 147 : return "Seraphine"; break;
     case 360 : return "Samira"; break;
     case 526 : return "Rell"; break;
+    case 234 : return "Viego"; break;
     default: console.log("ID inconnu. ID -> "+id);break;
   }
 }
