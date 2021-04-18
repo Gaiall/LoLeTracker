@@ -156,6 +156,7 @@ function getChampionTitle(championName){
             case "Samira" : championTitle =  json.data.Samira.title; break;
             case "Rell" : championTitle = json.data.Rell.title; break;
             case "Viego" : championTitle = json.data.Viego.title; break;
+            case "Gwen" : championTitle = json.data.Gwen.title; break;
         }
     });
     return championTitle;
