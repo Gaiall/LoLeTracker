@@ -155,6 +155,8 @@ function chIdToName(id){
     case 526 : return "Rell"; break;
     case 234 : return "Viego"; break;
     case 887 : return "Gwen"; break;
+    case 166 : return "Akshan"; break;
+    case 711 : return "Vex"; break;
     default: console.log("ID inconnu. ID -> "+id);break;
   }
 }

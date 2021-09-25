@@ -155,6 +155,8 @@ function chNameToId(name){
     case "Rell" : return 526; break;
     case "Viego" : return 234; break;
     case "Gwen" : return 887; break;
+    case "Akshan" : return 166; break;
+    case "Vex" : return 711; break;
     default : console.log("Champion Inconnu : " + name); break;
   }
 }
